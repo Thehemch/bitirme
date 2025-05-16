@@ -1,0 +1,502 @@
+[
+  {
+    "ulke": "Cezayir",
+    "yil": 2022,
+    "veri_tipi": "zeytin_uretim",
+    "deger": 306
+  },
+  {
+    "ulke": "Cezayir",
+    "yil": 2023,
+    "veri_tipi": "zeytin_uretim",
+    "deger": 256
+  },
+  {
+    "ulke": "Cezayir",
+    "yil": 2024,
+    "veri_tipi": "zeytin_uretim",
+    "deger": 286
+  },
+  {
+    "ulke": "Cezayir",
+    "yil": 2025,
+    "veri_tipi": "zeytin_uretim",
+    "deger": 279.62,
+    "tahmin": true
+  },
+  {
+    "ulke": "Mısır",
+    "yil": 2022,
+    "veri_tipi": "zeytin_uretim",
+    "deger": 650
+  },
+  {
+    "ulke": "Mısır",
+    "yil": 2023,
+    "veri_tipi": "zeytin_uretim",
+    "deger": 600
+  },
+  {
+    "ulke": "Mısır",
+    "yil": 2024,
+    "veri_tipi": "zeytin_uretim",
+    "deger": 600
+  },
+  {
+    "ulke": "Mısır",
+    "yil": 2025,
+    "veri_tipi": "zeytin_uretim",
+    "deger": 585.0,
+    "tahmin": true
+  },
+  {
+    "ulke": "Portekiz",
+    "yil": 2022,
+    "veri_tipi": "zeytin_uretim",
+    "deger": 342
+  },
+  {
+    "ulke": "Portekiz",
+    "yil": 2023,
+    "veri_tipi": "zeytin_uretim",
+    "deger": 370
+  },
+  {
+    "ulke": "Portekiz",
+    "yil": 2024,
+    "veri_tipi": "zeytin_uretim",
+    "deger": 458
+  },
+  {
+    "ulke": "Portekiz",
+    "yil": 2025,
+    "veri_tipi": "zeytin_uretim",
+    "deger": 427.58,
+    "tahmin": true
+  },
+  {
+    "ulke": "Türkiye",
+    "yil": 2022,
+    "veri_tipi": "zeytin_uretim",
+    "deger": 450
+  },
+  {
+    "ulke": "Türkiye",
+    "yil": 2023,
+    "veri_tipi": "zeytin_uretim",
+    "deger": 605
+  },
+  {
+    "ulke": "Türkiye",
+    "yil": 2024,
+    "veri_tipi": "zeytin_uretim",
+    "deger": 445
+  },
+  {
+    "ulke": "Türkiye",
+    "yil": 2025,
+    "veri_tipi": "zeytin_uretim",
+    "deger": 483.65,
+    "tahmin": true
+  },
+  {
+    "ulke": "İspanya",
+    "yil": 2022,
+    "veri_tipi": "zeytin_uretim",
+    "deger": 659
+  },
+  {
+    "ulke": "İspanya",
+    "yil": 2023,
+    "veri_tipi": "zeytin_uretim",
+    "deger": 414
+  },
+  {
+    "ulke": "İspanya",
+    "yil": 2024,
+    "veri_tipi": "zeytin_uretim",
+    "deger": 387
+  },
+  {
+    "ulke": "İspanya",
+    "yil": 2025,
+    "veri_tipi": "zeytin_uretim",
+    "deger": 415.97,
+    "tahmin": true
+  },
+  {
+    "ulke": "Fas",
+    "yil": 2022,
+    "veri_tipi": "zeytin_ihracat",
+    "deger": 76
+  },
+  {
+    "ulke": "Fas",
+    "yil": 2023,
+    "veri_tipi": "zeytin_ihracat",
+    "deger": 80
+  },
+  {
+    "ulke": "Fas",
+    "yil": 2024,
+    "veri_tipi": "zeytin_ihracat",
+    "deger": 80
+  },
+  {
+    "ulke": "Fas",
+    "yil": 2025,
+    "veri_tipi": "zeytin_ihracat",
+    "deger": 79.56,
+    "tahmin": true
+  },
+  {
+    "ulke": "Tunus",
+    "yil": 2022,
+    "veri_tipi": "zeytin_ihracat",
+    "deger": 102
+  },
+  {
+    "ulke": "Tunus",
+    "yil": 2023,
+    "veri_tipi": "zeytin_ihracat",
+    "deger": 160
+  },
+  {
+    "ulke": "Tunus",
+    "yil": 2024,
+    "veri_tipi": "zeytin_ihracat",
+    "deger": 205
+  },
+  {
+    "ulke": "Tunus",
+    "yil": 2025,
+    "veri_tipi": "zeytin_ihracat",
+    "deger": 287.4,
+    "tahmin": true
+  },
+  {
+    "ulke": "Türkiye",
+    "yil": 2022,
+    "veri_tipi": "zeytin_ihracat",
+    "deger": 110
+  },
+  {
+    "ulke": "Türkiye",
+    "yil": 2023,
+    "veri_tipi": "zeytin_ihracat",
+    "deger": 100
+  },
+  {
+    "ulke": "Türkiye",
+    "yil": 2024,
+    "veri_tipi": "zeytin_ihracat",
+    "deger": 100
+  },
+  {
+    "ulke": "Türkiye",
+    "yil": 2025,
+    "veri_tipi": "zeytin_ihracat",
+    "deger": 101.4,
+    "tahmin": true
+  },
+  {
+    "ulke": "Yunanistan",
+    "yil": 2022,
+    "veri_tipi": "zeytin_ihracat",
+    "deger": 90
+  },
+  {
+    "ulke": "Yunanistan",
+    "yil": 2023,
+    "veri_tipi": "zeytin_ihracat",
+    "deger": 94
+  },
+  {
+    "ulke": "Yunanistan",
+    "yil": 2024,
+    "veri_tipi": "zeytin_ihracat",
+    "deger": 96
+  },
+  {
+    "ulke": "Yunanistan",
+    "yil": 2025,
+    "veri_tipi": "zeytin_ihracat",
+    "deger": 95.2,
+    "tahmin": true
+  },
+  {
+    "ulke": "İspanya",
+    "yil": 2022,
+    "veri_tipi": "zeytin_ihracat",
+    "deger": 186
+  },
+  {
+    "ulke": "İspanya",
+    "yil": 2023,
+    "veri_tipi": "zeytin_ihracat",
+    "deger": 171
+  },
+  {
+    "ulke": "İspanya",
+    "yil": 2024,
+    "veri_tipi": "zeytin_ihracat",
+    "deger": 167
+  },
+  {
+    "ulke": "İspanya",
+    "yil": 2025,
+    "veri_tipi": "zeytin_ihracat",
+    "deger": 198.6,
+    "tahmin": true
+  },
+  {
+    "ulke": "ABD",
+    "yil": 2022,
+    "veri_tipi": "zeytin_tuketim",
+    "deger": 196
+  },
+  {
+    "ulke": "ABD",
+    "yil": 2023,
+    "veri_tipi": "zeytin_tuketim",
+    "deger": 176
+  },
+  {
+    "ulke": "ABD",
+    "yil": 2024,
+    "veri_tipi": "zeytin_tuketim",
+    "deger": 195
+  },
+  {
+    "ulke": "ABD",
+    "yil": 2025,
+    "veri_tipi": "zeytin_tuketim",
+    "deger": 184.1,
+    "tahmin": true
+  },
+  {
+    "ulke": "Mısır",
+    "yil": 2022,
+    "veri_tipi": "zeytin_tuketim",
+    "deger": 500
+  },
+  {
+    "ulke": "Mısır",
+    "yil": 2023,
+    "veri_tipi": "zeytin_tuketim",
+    "deger": 500
+  },
+  {
+    "ulke": "Mısır",
+    "yil": 2024,
+    "veri_tipi": "zeytin_tuketim",
+    "deger": 500
+  },
+  {
+    "ulke": "Mısır",
+    "yil": 2025,
+    "veri_tipi": "zeytin_tuketim",
+    "deger": 501.38,
+    "tahmin": true
+  },
+  {
+    "ulke": "Türkiye",
+    "yil": 2022,
+    "veri_tipi": "zeytin_tuketim",
+    "deger": 285
+  },
+  {
+    "ulke": "Türkiye",
+    "yil": 2023,
+    "veri_tipi": "zeytin_tuketim",
+    "deger": 407
+  },
+  {
+    "ulke": "Türkiye",
+    "yil": 2024,
+    "veri_tipi": "zeytin_tuketim",
+    "deger": 310
+  },
+  {
+    "ulke": "Türkiye",
+    "yil": 2025,
+    "veri_tipi": "zeytin_tuketim",
+    "deger": 230.2,
+    "tahmin": true
+  },
+  {
+    "ulke": "Yunanistan",
+    "yil": 2022,
+    "veri_tipi": "zeytin_tuketim",
+    "deger": 124
+  },
+  {
+    "ulke": "Yunanistan",
+    "yil": 2023,
+    "veri_tipi": "zeytin_tuketim",
+    "deger": 116
+  },
+  {
+    "ulke": "Yunanistan",
+    "yil": 2024,
+    "veri_tipi": "zeytin_tuketim",
+    "deger": 120
+  },
+  {
+    "ulke": "Yunanistan",
+    "yil": 2025,
+    "veri_tipi": "zeytin_tuketim",
+    "deger": 119.02,
+    "tahmin": true
+  },
+  {
+    "ulke": "İspanya",
+    "yil": 2022,
+    "veri_tipi": "zeytin_tuketim",
+    "deger": 180
+  },
+  {
+    "ulke": "İspanya",
+    "yil": 2023,
+    "veri_tipi": "zeytin_tuketim",
+    "deger": 181
+  },
+  {
+    "ulke": "İspanya",
+    "yil": 2024,
+    "veri_tipi": "zeytin_tuketim",
+    "deger": 170
+  },
+  {
+    "ulke": "İspanya",
+    "yil": 2025,
+    "veri_tipi": "zeytin_tuketim",
+    "deger": 179.88,
+    "tahmin": true
+  },
+  {
+    "ulke": "ABD",
+    "yil": 2022,
+    "veri_tipi": "zeytin_ithalat",
+    "deger": 157
+  },
+  {
+    "ulke": "ABD",
+    "yil": 2023,
+    "veri_tipi": "zeytin_ithalat",
+    "deger": 163
+  },
+  {
+    "ulke": "ABD",
+    "yil": 2024,
+    "veri_tipi": "zeytin_ithalat",
+    "deger": 174
+  },
+  {
+    "ulke": "ABD",
+    "yil": 2025,
+    "veri_tipi": "zeytin_ithalat",
+    "deger": 172.1,
+    "tahmin": true
+  },
+  {
+    "ulke": "Brezilya",
+    "yil": 2022,
+    "veri_tipi": "zeytin_ithalat",
+    "deger": 125
+  },
+  {
+    "ulke": "Brezilya",
+    "yil": 2023,
+    "veri_tipi": "zeytin_ithalat",
+    "deger": 123
+  },
+  {
+    "ulke": "Brezilya",
+    "yil": 2024,
+    "veri_tipi": "zeytin_ithalat",
+    "deger": 135
+  },
+  {
+    "ulke": "Brezilya",
+    "yil": 2025,
+    "veri_tipi": "zeytin_ithalat",
+    "deger": 124.01,
+    "tahmin": true
+  },
+  {
+    "ulke": "Kanada",
+    "yil": 2022,
+    "veri_tipi": "zeytin_ithalat",
+    "deger": 35
+  },
+  {
+    "ulke": "Kanada",
+    "yil": 2023,
+    "veri_tipi": "zeytin_ithalat",
+    "deger": 34
+  },
+  {
+    "ulke": "Kanada",
+    "yil": 2024,
+    "veri_tipi": "zeytin_ithalat",
+    "deger": 37
+  },
+  {
+    "ulke": "Kanada",
+    "yil": 2025,
+    "veri_tipi": "zeytin_ithalat",
+    "deger": 35.57,
+    "tahmin": true
+  },
+  {
+    "ulke": "Rusya",
+    "yil": 2022,
+    "veri_tipi": "zeytin_ithalat",
+    "deger": 30
+  },
+  {
+    "ulke": "Rusya",
+    "yil": 2023,
+    "veri_tipi": "zeytin_ithalat",
+    "deger": 32
+  },
+  {
+    "ulke": "Rusya",
+    "yil": 2024,
+    "veri_tipi": "zeytin_ithalat",
+    "deger": 32
+  },
+  {
+    "ulke": "Rusya",
+    "yil": 2025,
+    "veri_tipi": "zeytin_ithalat",
+    "deger": 37.0,
+    "tahmin": true
+  },
+  {
+    "ulke": "S.Arabistan",
+    "yil": 2022,
+    "veri_tipi": "zeytin_ithalat",
+    "deger": 29
+  },
+  {
+    "ulke": "S.Arabistan",
+    "yil": 2023,
+    "veri_tipi": "zeytin_ithalat",
+    "deger": 29
+  },
+  {
+    "ulke": "S.Arabistan",
+    "yil": 2024,
+    "veri_tipi": "zeytin_ithalat",
+    "deger": 29
+  },
+  {
+    "ulke": "S.Arabistan",
+    "yil": 2025,
+    "veri_tipi": "zeytin_ithalat",
+    "deger": 28.98,
+    "tahmin": true
+  }
+]

@@ -1,0 +1,125 @@
+[
+    {
+        "ulke": "İtalya",
+        "yil": 2021,
+        "fiyat": 3.46,
+        "tur": "gercek"
+    },
+    {
+        "ulke": "İtalya",
+        "yil": 2022,
+        "fiyat": 4.58,
+        "tur": "gercek"
+    },
+    {
+        "ulke": "İtalya",
+        "yil": 2023,
+        "fiyat": 4.31,
+        "tur": "gercek"
+    },
+    {
+        "ulke": "İtalya",
+        "yil": 2024,
+        "fiyat": 6.79,
+        "tur": "gercek"
+    },
+    {
+        "ulke": "İtalya",
+        "yil": 2025,
+        "fiyat": 5.39,
+        "tur": "tahmin"
+    },
+    {
+        "ulke": "İspanya",
+        "yil": 2021,
+        "fiyat": 2.04,
+        "tur": "gercek"
+    },
+    {
+        "ulke": "İspanya",
+        "yil": 2022,
+        "fiyat": 2.86,
+        "tur": "gercek"
+    },
+    {
+        "ulke": "İspanya",
+        "yil": 2023,
+        "fiyat": 3.43,
+        "tur": "gercek"
+    },
+    {
+        "ulke": "İspanya",
+        "yil": 2024,
+        "fiyat": 5.91,
+        "tur": "gercek"
+    },
+    {
+        "ulke": "İspanya",
+        "yil": 2025,
+        "fiyat": 3.2,
+        "tur": "tahmin"
+    },
+    {
+        "ulke": "Yunanistan",
+        "yil": 2021,
+        "fiyat": 2.14,
+        "tur": "gercek"
+    },
+    {
+        "ulke": "Yunanistan",
+        "yil": 2022,
+        "fiyat": 2.68,
+        "tur": "gercek"
+    },
+    {
+        "ulke": "Yunanistan",
+        "yil": 2023,
+        "fiyat": 3.19,
+        "tur": "gercek"
+    },
+    {
+        "ulke": "Yunanistan",
+        "yil": 2024,
+        "fiyat": 5.36,
+        "tur": "gercek"
+    },
+    {
+        "ulke": "Yunanistan",
+        "yil": 2025,
+        "fiyat": 2.99,
+        "tur": "tahmin"
+    },
+    {
+        "ulke": "Türkiye",
+        "yil": 2021,
+        "fiyat": 2.29,
+        "tur": "gercek"
+    },
+    {
+        "ulke": "Türkiye",
+        "yil": 2022,
+        "fiyat": 1.95,
+        "tur": "gercek"
+    },
+    {
+        "ulke": "Türkiye",
+        "yil": 2023,
+        "fiyat": 1.73,
+        "tur": "gercek"
+    },
+    {
+        "ulke": "Türkiye",
+        "yil": 2024,
+        "fiyat": 2.33,
+        "tur": "gercek"
+    },
+    {
+        "ulke": "Türkiye",
+        "yil": 2025,
+        "fiyat": 1.82,
+        "tur": "tahmin"
+    }
+    
+    
+    
+]

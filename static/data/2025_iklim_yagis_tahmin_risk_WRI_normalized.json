@@ -1,0 +1,92 @@
+[
+    {
+        "ulke": "İspanya",
+        "sicaklik_2025": 15.32,
+        "yagis_2025": 658.18,
+        "secili_model_sicaklik": "SMA",
+        "secili_model_yagis": "LR",
+        "risk_skoru_raw": -124.03,
+        "risk_skoru_normalized": 4.32
+    },
+    {
+        "ulke": "İtalya",
+        "sicaklik_2025": 14.48,
+        "yagis_2025": 686.17,
+        "secili_model_sicaklik": "LR",
+        "secili_model_yagis": "LR",
+        "risk_skoru_raw": -129.99,
+        "risk_skoru_normalized": 0.0
+    },
+    {
+        "ulke": "Yunanistan",
+        "sicaklik_2025": 15.76,
+        "yagis_2025": 592.09,
+        "secili_model_sicaklik": "SMA",
+        "secili_model_yagis": "SMA",
+        "risk_skoru_raw": -110.54,
+        "risk_skoru_normalized": 14.1
+    },
+    {
+        "ulke": "Türkiye",
+        "sicaklik_2025": 12.76,
+        "yagis_2025": 623.27,
+        "secili_model_sicaklik": "LR",
+        "secili_model_yagis": "LR",
+        "risk_skoru_raw": -118.27,
+        "risk_skoru_normalized": 8.5
+    },
+    {
+        "ulke": "Tunus",
+        "sicaklik_2025": 21.33,
+        "yagis_2025": 196.84,
+        "secili_model_sicaklik": "SMA",
+        "secili_model_yagis": "LR",
+        "risk_skoru_raw": -28.7,
+        "risk_skoru_normalized": 73.41
+    },
+    {
+        "ulke": "Fas",
+        "sicaklik_2025": 18.16,
+        "yagis_2025": 235.23,
+        "secili_model_sicaklik": "LR",
+        "secili_model_yagis": "SMA",
+        "risk_skoru_raw": -37.97,
+        "risk_skoru_normalized": 66.69
+    },
+    {
+        "ulke": "Cezayir",
+        "sicaklik_2025": 24.32,
+        "yagis_2025": 69.33,
+        "secili_model_sicaklik": "LR",
+        "secili_model_yagis": "SMA",
+        "risk_skoru_raw": -1.71,
+        "risk_skoru_normalized": 92.96
+    },
+    {
+        "ulke": "Mısır",
+        "sicaklik_2025": 24.91,
+        "yagis_2025": 22.28,
+        "secili_model_sicaklik": "LR",
+        "secili_model_yagis": "SMA",
+        "risk_skoru_raw": 8.0,
+        "risk_skoru_normalized": 100.0
+    },
+    {
+        "ulke": "Portekiz",
+        "sicaklik_2025": 16.88,
+        "yagis_2025": 555.0,
+        "secili_model_sicaklik": "SMA",
+        "secili_model_yagis": "LR",
+        "risk_skoru_raw": -102.56,
+        "risk_skoru_normalized": 19.88
+    },
+    {
+        "ulke": "Suriye",
+        "sicaklik_2025": 20.73,
+        "yagis_2025": 286.22,
+        "secili_model_sicaklik": "LR",
+        "secili_model_yagis": "LR",
+        "risk_skoru_raw": -46.88,
+        "risk_skoru_normalized": 60.23
+    }
+]

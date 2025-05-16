@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>🍾 Zeytinyağı Tahminleme</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <link rel="stylesheet" href="/static/css/custom.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top shadow-sm">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center fw-bold text-success" href="/">
+        <img src="/static/img/logo.png" alt="Logo" class="logo-img me-2" />
+        ERKAN ZEYTİNCİLİK
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+        <ul class="navbar-nav mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link" href="/">ANASAYFA</a></li>
+          <li class="nav-item"><a class="nav-link" href="/dashboard">DASHBOARD</a></li>
+          <li class="nav-item"><a class="nav-link active text-success" href="/tahminleme">TAHMİNLEME</a></li>
+          <li class="nav-item"><a class="nav-link" href="/akilli_harita">AKILLI HARİTA</a></li>
+          <li class="nav-item"><a class="nav-link" href="/rapor">RAPOR</a></li>
+          <li class="nav-item"><a class="nav-link" href="/contact">CONTACT</a></li>
+        </ul>
+        <a class="btn btn-success ms-3" href="#">Get Started</a>
+      </div>
+    </div>
+  </nav>
+  
+  
+  
+  
+  
+  
+
+<!-- BAŞLIK + BUTONLAR -->
+<section class="pt-5" style="margin-top: 68px;">
+  <div class="container">
+    <div class="text-center mb-4">
+        <h3 class="text-center fw-bold text-success my-4" style="font-size: 2rem;">
+            🤖 2025 Yılı Zeytinyağı Tahminleme Sonuçları
+
+          </h3>
+    </div>
+
+    <div class="d-flex justify-content-center">
+      <div class="card p-4 border-success shadow-sm" style="max-width: 500px; width: 100%;">
+        <div class="text-center mb-3 fw-bold">Tahmin Türü</div>
+        <div class="btn-group w-100">
+          <a href="/tahmin" class="btn btn-outline-success">🫒 Zeytin Tahminleme</a>
+          <a href="yag_tahminleme.html" class="btn btn-outline-primary active">🍾 Zeytinyağı Tahminleme</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GRAFİKLER -->
+<div class="container py-5">
+  <div class="row g-4">
+
+  <!-- ÜRETİM -->
+<div class="col-md-6">
+  <section class="bg-light p-4 rounded shadow-sm border border-success">
+    <h3 class="text-success fw-bold text-center mb-4">🫒 Üretim Verileri (2022–2025)</h3>
+    <div class="text-center mb-3">
+      <select id="ulkeSecimiYagUretim" class="form-select w-75 mx-auto mb-3"></select>
+      <button class="btn btn-outline-success me-2" onclick="cizYagChart('uretim', 'line')">📈 Line Chart</button>
+      <button class="btn btn-outline-primary" onclick="cizYagChart('uretim', 'bar')">📊 Bar Chart</button>
+    </div>
+    <canvas id="yag_uretim_chart" class="w-100" style="max-height:220px;"></canvas>
+  </section>
+</div>
+
+  
+  <!-- TÜKETİM -->
+<div class="col-md-6">
+  <section class="bg-light p-4 rounded shadow-sm border border-success">
+    <h3 class="text-success fw-bold text-center mb-4">📊 Tüketim Verileri (2022–2025)</h3>
+    <div class="text-center mb-3">
+      <select id="ulkeSecimiYagTuketim" class="form-select w-75 mx-auto mb-3"></select>
+      <button class="btn btn-outline-success me-2" onclick="cizYagChart('tuketim', 'line')">📈 Line Chart</button>
+      <button class="btn btn-outline-primary" onclick="cizYagChart('tuketim', 'bar')">📊 Bar Chart</button>
+    </div>
+    <canvas id="yag_tuketim_chart" class="w-100" style="max-height:220px;"></canvas>
+  </section>
+</div>
+
+  
+  <!-- İHRACAT -->
+<div class="col-md-6">
+  <section class="bg-light p-4 rounded shadow-sm border border-success">
+    <h3 class="text-success fw-bold text-center mb-4">📦 İhracat Verileri (2022–2025)</h3>
+    <div class="text-center mb-3">
+      <select id="ulkeSecimiYagIhracat" class="form-select w-75 mx-auto mb-3"></select>
+      <button class="btn btn-outline-success me-2" onclick="cizYagChart('ihracat', 'line')">📈 Line Chart</button>
+      <button class="btn btn-outline-primary" onclick="cizYagChart('ihracat', 'bar')">📊 Bar Chart</button>
+    </div>
+    <canvas id="yag_ihracat_chart" class="w-100" style="max-height:220px;"></canvas>
+  </section>
+</div>
+
+  
+  <!-- İTHALAT -->
+<div class="col-md-6">
+  <section class="bg-light p-4 rounded shadow-sm border border-success">
+    <h3 class="text-success fw-bold text-center mb-4">📥 İthalat Verileri (2022–2025)</h3>
+    <div class="text-center mb-3">
+      <select id="ulkeSecimiYagIthalat" class="form-select w-75 mx-auto mb-3"></select>
+      <button class="btn btn-outline-success me-2" onclick="cizYagChart('ithalat', 'line')">📈 Line Chart</button>
+      <button class="btn btn-outline-primary" onclick="cizYagChart('ithalat', 'bar')">📊 Bar Chart</button>
+    </div>
+    <canvas id="yag_ithalat_chart" class="w-100" style="max-height:220px;"></canvas>
+  </section>
+</div>
+
+  
+  
+  
+  
+
+    <!-- FİYAT GRAFİĞİ -->
+    <div class="col-12">
+      <div class="card p-4 border border-success shadow-sm">
+        <h5 class="text-center text-success">Zeytinyağı Fiyat Tahminleri (€/kg)</h5>
+        <div class="d-flex justify-content-between align-items-center mb-3">
+          <select id="yagFiyatUlke" class="form-select w-50">
+            <option value="İspanya">İspanya</option>
+            <option value="İtalya">İtalya</option>
+            <option value="Yunanistan">Yunanistan</option>
+            <option value="Türkiye">Türkiye</option>
+          </select>
+          <div>
+            <button id="barBtn" class="btn btn-outline-primary me-2" onclick="showChart('bar')">📊 Bar</button>
+            <button id="lineBtn" class="btn btn-outline-success" onclick="showChart('line')">📈 Line</button>
+          </div>
+        </div>
+        <canvas id="yagFiyatChartBar" class="chart-canvas"></canvas>
+        <canvas id="yagFiyatChartLine" class="chart-canvas d-none"></canvas>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer class="text-center mt-5 mb-3 text-muted">
+  Hazırlayan: Hamza ERKAN | DEÜ Yönetim Bilişim Sistemleri © 2025
+</footer>
+
+<!-- GRAFİK SCRIPTLERİ -->
+<script>
+let yagVeri = [], fiyatVeri = [], charts = {}, grafikTipleri = {
+  uretim: "line", tuketim: "line", ihracat: "line", ithalat: "line"
+};
+
+fetch("/static/data/yag_2022_2025_.json")
+  .then(r => r.json())
+  .then(data => {
+    yagVeri = data;
+    ["uretim", "tuketim", "ihracat", "ithalat"].forEach(tip => {
+      const sec = document.getElementById(`ulkeSecimiYag${tip.charAt(0).toUpperCase() + tip.slice(1)}`);
+      const ulkeler = [...new Set(yagVeri.filter(v => v.veri_tipi === `yag_${tip}`).map(v => v.ulke))];
+      sec.innerHTML = '<option disabled selected>Ülke Seçiniz</option>';
+      ulkeler.forEach(u => sec.innerHTML += `<option value="${u}">${u}</option>`);
+      sec.addEventListener("change", () => cizYagChart(tip));
+    });
+  });
+
+  function cizYagChart(tip, tipDeger) {
+  if (tipDeger) grafikTipleri[tip] = tipDeger;
+  const ulke = document.getElementById(`ulkeSecimiYag${capitalize(tip)}`).value;
+  const ctx = document.getElementById(`yag_${tip}_chart`).getContext("2d");
+  if (charts[tip]) charts[tip].destroy();
+  const veri = yagVeri.filter(v => v.ulke === ulke && v.veri_tipi === `yag_${tip}`);
+  const yillar = veri.map(v => v.yil);
+  const degerler = veri.map(v => v.deger);
+  const tahminMi = veri.map(v => v.yil === 2025);
+
+  // Renkleri belirle
+  let renk = "green", border = "green";
+  if (tip === "tuketim") { renk = "rgba(229, 43, 80, 0.7)"; border = "red"; }
+  else if (tip === "ihracat") { renk = "rgba(255,165,0,0.7)"; border = "orange"; }
+  else if (tip === "ithalat") { renk = "rgba(0,123,255,0.6)"; border = "blue"; }
+
+  charts[tip] = new Chart(ctx, {
+    type: grafikTipleri[tip],
+    data: {
+      labels: yillar,
+      datasets: [{
+        label: `${ulke} ${capitalize(tip)} Verileri`,
+        data: degerler,
+        backgroundColor: tahminMi.map(t => t ? renk : "rgba(0,0,0,0.2)"),
+        borderColor: border,
+        pointBackgroundColor: tahminMi.map(t => t ? border : "gray"),
+        pointRadius: 5,
+        tension: 0.3,
+        fill: false
+      }]
+    },
+    options: {
+      responsive: true,
+      plugins: {
+        tooltip: {
+          callbacks: {
+            label: (ctx) => `${ctx.raw} bin ton${tahminMi[ctx.dataIndex] ? " (tahmin)" : ""}`
+          }
+        }
+      },
+      scales: {
+        y: { title: { display: true, text: "Bin Ton" } },
+        x: { title: { display: true, text: "Yıl" } }
+      }
+    }
+  });
+}
+
+
+function capitalize(s) {
+  return s.charAt(0).toUpperCase() + s.slice(1);
+}
+</script>
+
+<!-- FİYAT GRAFİĞİ -->
+<script>
+let fiyatChartBar, fiyatChartLine;
+
+fetch("/static/data/zeytinyagi_fiyat_2021_2025_tahminli.json")
+  .then(r => r.json())
+  .then(data => {
+    fiyatVeri = data;
+    drawFiyatCharts("İspanya");
+  });
+
+document.getElementById("yagFiyatUlke").addEventListener("change", function () {
+  drawFiyatCharts(this.value);
+});
+
+function drawFiyatCharts(ulke) {
+  const data = fiyatVeri.filter(d => d.ulke === ulke);
+  const yillar = data.map(d => d.yil);
+  const fiyatlar = data.map(d => d.fiyat);
+  const tahminler = data.map(d => d.tur === "tahmin");
+
+  // BAR
+  if (fiyatChartBar) fiyatChartBar.destroy();
+  fiyatChartBar = new Chart(document.getElementById("yagFiyatChartBar"), {
+    type: "bar",
+    data: {
+      labels: yillar,
+      datasets: [{
+        label: `${ulke} Fiyat (€/kg)`,
+        data: fiyatlar,
+        backgroundColor: tahminler.map(t => t ? "#12a119" : "#ccc"),
+        borderColor: "#000",
+        borderWidth: 1
+      }]
+    },
+    options: {
+      responsive: true,
+      plugins: {
+        tooltip: {
+          callbacks: {
+            label: ctx => `${ctx.raw} €/kg${tahminler[ctx.dataIndex] ? " (tahmin)" : ""}`
+          }
+        }
+      },
+      scales: {
+        y: { title: { display: true, text: "€/kg" } },
+        x: { title: { display: true, text: "Yıl" } }
+      }
+    }
+  });
+
+  // LINE
+  if (fiyatChartLine) fiyatChartLine.destroy();
+  fiyatChartLine = new Chart(document.getElementById("yagFiyatChartLine"), {
+    type: "line",
+    data: {
+      labels: yillar,
+      datasets: [{
+        label: `${ulke} Fiyat (€/kg)`,
+        data: fiyatlar,
+        borderColor: "#12a119",
+        tension: 0.3,
+        pointBackgroundColor: tahminler.map(t => t ? "#12a119" : "#000"),
+        pointBorderColor: "#000",
+        pointRadius: 5
+      }]
+    },
+    options: {
+      responsive: true,
+      plugins: {
+        tooltip: {
+          callbacks: {
+            label: ctx => `${ctx.raw} €/kg${tahminler[ctx.dataIndex] ? " (tahmin)" : ""}`
+          }
+        }
+      },
+      scales: {
+        y: { title: { display: true, text: "€/kg" } },
+        x: { title: { display: true, text: "Yıl" } }
+      }
+    }
+  });
+
+  showChart("bar");
+}
+
+function showChart(tip) {
+  const bar = document.getElementById("yagFiyatChartBar");
+  const line = document.getElementById("yagFiyatChartLine");
+  bar.classList.toggle("d-none", tip !== "bar");
+  line.classList.toggle("d-none", tip !== "line");
+}
+</script>
+
+</body>
+</html>

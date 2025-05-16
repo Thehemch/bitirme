@@ -1,0 +1,482 @@
+[
+    {
+        "ulke": "Portekiz",
+        "yil": 2022,
+        "veri_tipi": "yag_ihracat",
+        "deger": 72
+    },
+    {
+        "ulke": "Portekiz",
+        "yil": 2023,
+        "veri_tipi": "yag_ihracat",
+        "deger": 59
+    },
+    {
+        "ulke": "Portekiz",
+        "yil": 2024,
+        "veri_tipi": "yag_ihracat",
+        "deger": 54
+    },
+    {
+        "ulke": "Portekiz",
+        "yil": 2025,
+        "veri_tipi": "yag_ihracat",
+        "deger": 56.95
+    },
+    {
+        "ulke": "Tunus",
+        "yil": 2022,
+        "veri_tipi": "yag_ihracat",
+        "deger": 180
+    },
+    {
+        "ulke": "Tunus",
+        "yil": 2023,
+        "veri_tipi": "yag_ihracat",
+        "deger": 170
+    },
+    {
+        "ulke": "Tunus",
+        "yil": 2024,
+        "veri_tipi": "yag_ihracat",
+        "deger": 172
+    },
+    {
+        "ulke": "Tunus",
+        "yil": 2025,
+        "veri_tipi": "yag_ihracat",
+        "deger": 173.21
+    },
+    {
+        "ulke": "Türkiye",
+        "yil": 2022,
+        "veri_tipi": "yag_ihracat",
+        "deger": 58
+    },
+    {
+        "ulke": "Türkiye",
+        "yil": 2023,
+        "veri_tipi": "yag_ihracat",
+        "deger": 134
+    },
+    {
+        "ulke": "Türkiye",
+        "yil": 2024,
+        "veri_tipi": "yag_ihracat",
+        "deger": 130
+    },
+    {
+        "ulke": "Türkiye",
+        "yil": 2025,
+        "veri_tipi": "yag_ihracat",
+        "deger": 125.84
+    },
+    {
+        "ulke": "İspanya",
+        "yil": 2022,
+        "veri_tipi": "yag_ihracat",
+        "deger": 467
+    },
+    {
+        "ulke": "İspanya",
+        "yil": 2023,
+        "veri_tipi": "yag_ihracat",
+        "deger": 316
+    },
+    {
+        "ulke": "İspanya",
+        "yil": 2024,
+        "veri_tipi": "yag_ihracat",
+        "deger": 288
+    },
+    {
+        "ulke": "İspanya",
+        "yil": 2025,
+        "veri_tipi": "yag_ihracat",
+        "deger": 311.05
+    },
+    {
+        "ulke": "İtalya",
+        "yil": 2022,
+        "veri_tipi": "yag_ihracat",
+        "deger": 234
+    },
+    {
+        "ulke": "İtalya",
+        "yil": 2023,
+        "veri_tipi": "yag_ihracat",
+        "deger": 185
+    },
+    {
+        "ulke": "İtalya",
+        "yil": 2024,
+        "veri_tipi": "yag_ihracat",
+        "deger": 166
+    },
+    {
+        "ulke": "İtalya",
+        "yil": 2025,
+        "veri_tipi": "yag_ihracat",
+        "deger": 176.63
+    },
+    {
+        "ulke": "Abd",
+        "yil": 2022,
+        "veri_tipi": "yag_ithalat",
+        "deger": 399
+    },
+    {
+        "ulke": "Abd",
+        "yil": 2023,
+        "veri_tipi": "yag_ithalat",
+        "deger": 358
+    },
+    {
+        "ulke": "Abd",
+        "yil": 2024,
+        "veri_tipi": "yag_ithalat",
+        "deger": 360
+    },
+    {
+        "ulke": "Abd",
+        "yil": 2025,
+        "veri_tipi": "yag_ithalat",
+        "deger": 365.93
+    },
+    {
+        "ulke": "Brezilya",
+        "yil": 2022,
+        "veri_tipi": "yag_ithalat",
+        "deger": 103
+    },
+    {
+        "ulke": "Brezilya",
+        "yil": 2023,
+        "veri_tipi": "yag_ithalat",
+        "deger": 91
+    },
+    {
+        "ulke": "Brezilya",
+        "yil": 2024,
+        "veri_tipi": "yag_ithalat",
+        "deger": 85
+    },
+    {
+        "ulke": "Brezilya",
+        "yil": 2025,
+        "veri_tipi": "yag_ithalat",
+        "deger": 88.18
+    },
+    {
+        "ulke": "Japonya",
+        "yil": 2022,
+        "veri_tipi": "yag_ithalat",
+        "deger": 62
+    },
+    {
+        "ulke": "Japonya",
+        "yil": 2023,
+        "veri_tipi": "yag_ithalat",
+        "deger": 52
+    },
+    {
+        "ulke": "Japonya",
+        "yil": 2024,
+        "veri_tipi": "yag_ithalat",
+        "deger": 54
+    },
+    {
+        "ulke": "Japonya",
+        "yil": 2025,
+        "veri_tipi": "yag_ithalat",
+        "deger": 54.16
+    },
+    {
+        "ulke": "İspanya",
+        "yil": 2022,
+        "veri_tipi": "yag_ithalat",
+        "deger": 85
+    },
+    {
+        "ulke": "İspanya",
+        "yil": 2023,
+        "veri_tipi": "yag_ithalat",
+        "deger": 97
+    },
+    {
+        "ulke": "İspanya",
+        "yil": 2024,
+        "veri_tipi": "yag_ithalat",
+        "deger": 92
+    },
+    {
+        "ulke": "İspanya",
+        "yil": 2025,
+        "veri_tipi": "yag_ithalat",
+        "deger": 93.92
+    },
+    {
+        "ulke": "İtalya",
+        "yil": 2022,
+        "veri_tipi": "yag_ithalat",
+        "deger": 51
+    },
+    {
+        "ulke": "İtalya",
+        "yil": 2023,
+        "veri_tipi": "yag_ithalat",
+        "deger": 64
+    },
+    {
+        "ulke": "İtalya",
+        "yil": 2024,
+        "veri_tipi": "yag_ithalat",
+        "deger": 56
+    },
+    {
+        "ulke": "İtalya",
+        "yil": 2025,
+        "veri_tipi": "yag_ithalat",
+        "deger": 57.55
+    },
+    {
+        "ulke": "Abd",
+        "yil": 2022,
+        "veri_tipi": "yag_tuketim",
+        "deger": 412
+    },
+    {
+        "ulke": "Abd",
+        "yil": 2023,
+        "veri_tipi": "yag_tuketim",
+        "deger": 367
+    },
+    {
+        "ulke": "Abd",
+        "yil": 2024,
+        "veri_tipi": "yag_tuketim",
+        "deger": 368
+    },
+    {
+        "ulke": "Abd",
+        "yil": 2025,
+        "veri_tipi": "yag_tuketim",
+        "deger": 371.25
+    },
+    {
+        "ulke": "Fas",
+        "yil": 2022,
+        "veri_tipi": "yag_tuketim",
+        "deger": 170
+    },
+    {
+        "ulke": "Fas",
+        "yil": 2023,
+        "veri_tipi": "yag_tuketim",
+        "deger": 130
+    },
+    {
+        "ulke": "Fas",
+        "yil": 2024,
+        "veri_tipi": "yag_tuketim",
+        "deger": 120
+    },
+    {
+        "ulke": "Fas",
+        "yil": 2025,
+        "veri_tipi": "yag_tuketim",
+        "deger": 126.4
+    },
+    {
+        "ulke": "Türkiye",
+        "yil": 2022,
+        "veri_tipi": "yag_tuketim",
+        "deger": 170
+    },
+    {
+        "ulke": "Türkiye",
+        "yil": 2023,
+        "veri_tipi": "yag_tuketim",
+        "deger": 179
+    },
+    {
+        "ulke": "Türkiye",
+        "yil": 2024,
+        "veri_tipi": "yag_tuketim",
+        "deger": 121
+    },
+    {
+        "ulke": "Türkiye",
+        "yil": 2025,
+        "veri_tipi": "yag_tuketim",
+        "deger": 139.51
+    },
+    {
+        "ulke": "İspanya",
+        "yil": 2022,
+        "veri_tipi": "yag_tuketim",
+        "deger": 587
+    },
+    {
+        "ulke": "İspanya",
+        "yil": 2023,
+        "veri_tipi": "yag_tuketim",
+        "deger": 359
+    },
+    {
+        "ulke": "İspanya",
+        "yil": 2024,
+        "veri_tipi": "yag_tuketim",
+        "deger": 350
+    },
+    {
+        "ulke": "İspanya",
+        "yil": 2025,
+        "veri_tipi": "yag_tuketim",
+        "deger": 372.66
+    },
+    {
+        "ulke": "İtalya",
+        "yil": 2022,
+        "veri_tipi": "yag_tuketim",
+        "deger": 453
+    },
+    {
+        "ulke": "İtalya",
+        "yil": 2023,
+        "veri_tipi": "yag_tuketim",
+        "deger": 478
+    },
+    {
+        "ulke": "İtalya",
+        "yil": 2024,
+        "veri_tipi": "yag_tuketim",
+        "deger": 415
+    },
+    {
+        "ulke": "İtalya",
+        "yil": 2025,
+        "veri_tipi": "yag_tuketim",
+        "deger": 433.53
+    },
+    {
+        "ulke": "Tunus",
+        "yil": 2022,
+        "veri_tipi": "yag_uretim",
+        "deger": 240
+    },
+    {
+        "ulke": "Tunus",
+        "yil": 2023,
+        "veri_tipi": "yag_uretim",
+        "deger": 180
+    },
+    {
+        "ulke": "Tunus",
+        "yil": 2024,
+        "veri_tipi": "yag_uretim",
+        "deger": 200
+    },
+    {
+        "ulke": "Tunus",
+        "yil": 2025,
+        "veri_tipi": "yag_uretim",
+        "deger": 196.6
+    },
+    {
+        "ulke": "Türkiye",
+        "yil": 2022,
+        "veri_tipi": "yag_uretim",
+        "deger": 235
+    },
+    {
+        "ulke": "Türkiye",
+        "yil": 2023,
+        "veri_tipi": "yag_uretim",
+        "deger": 380
+    },
+    {
+        "ulke": "Türkiye",
+        "yil": 2024,
+        "veri_tipi": "yag_uretim",
+        "deger": 210
+    },
+    {
+        "ulke": "Türkiye",
+        "yil": 2025,
+        "veri_tipi": "yag_uretim",
+        "deger": 253.91
+    },
+    {
+        "ulke": "Yunanistan",
+        "yil": 2022,
+        "veri_tipi": "yag_uretim",
+        "deger": 232
+    },
+    {
+        "ulke": "Yunanistan",
+        "yil": 2023,
+        "veri_tipi": "yag_uretim",
+        "deger": 345
+    },
+    {
+        "ulke": "Yunanistan",
+        "yil": 2024,
+        "veri_tipi": "yag_uretim",
+        "deger": 195
+    },
+    {
+        "ulke": "Yunanistan",
+        "yil": 2025,
+        "veri_tipi": "yag_uretim",
+        "deger": 236.69
+    },
+    {
+        "ulke": "İspanya",
+        "yil": 2022,
+        "veri_tipi": "yag_uretim",
+        "deger": 1491
+    },
+    {
+        "ulke": "İspanya",
+        "yil": 2023,
+        "veri_tipi": "yag_uretim",
+        "deger": 666
+    },
+    {
+        "ulke": "İspanya",
+        "yil": 2024,
+        "veri_tipi": "yag_uretim",
+        "deger": 766
+    },
+    {
+        "ulke": "İspanya",
+        "yil": 2025,
+        "veri_tipi": "yag_uretim",
+        "deger": 804.21
+    },
+    {
+        "ulke": "İtalya",
+        "yil": 2022,
+        "veri_tipi": "yag_uretim",
+        "deger": 329
+    },
+    {
+        "ulke": "İtalya",
+        "yil": 2023,
+        "veri_tipi": "yag_uretim",
+        "deger": 241
+    },
+    {
+        "ulke": "İtalya",
+        "yil": 2024,
+        "veri_tipi": "yag_uretim",
+        "deger": 289
+    },
+    {
+        "ulke": "İtalya",
+        "yil": 2025,
+        "veri_tipi": "yag_uretim",
+        "deger": 279.48
+    }
+]

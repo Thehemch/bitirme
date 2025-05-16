@@ -1,0 +1,362 @@
+[
+  {
+    "ulke": "İspanya",
+    "yil": 2020,
+    "sicaklik": 15.6,
+    "yagis": 475.0
+  },
+  {
+    "ulke": "İspanya",
+    "yil": 2021,
+    "sicaklik": 14.8,
+    "yagis": 636.0
+  },
+  {
+    "ulke": "İspanya",
+    "yil": 2022,
+    "sicaklik": 15.4,
+    "yagis": 557.76
+  },
+  {
+    "ulke": "İspanya",
+    "yil": 2023,
+    "sicaklik": 15.2,
+    "yagis": 529.89
+  },
+  {
+    "ulke": "İspanya",
+    "yil": 2024,
+    "sicaklik": 15.0,
+    "yagis": 669.1
+  },
+  {
+    "ulke": "İspanya",
+    "yil": 2025,
+    "sicaklik": 15.32,
+    "yagis": 658.18
+  },
+  {
+    "ulke": "İtalya",
+    "yil": 2020,
+    "sicaklik": 14.42,
+    "yagis": 832.0
+  },
+  {
+    "ulke": "İtalya",
+    "yil": 2021,
+    "sicaklik": 14.38,
+    "yagis": 832.0
+  },
+  {
+    "ulke": "İtalya",
+    "yil": 2022,
+    "sicaklik": 14.44,
+    "yagis": 578.66
+  },
+  {
+    "ulke": "İtalya",
+    "yil": 2023,
+    "sicaklik": 14.38,
+    "yagis": 772.88
+  },
+  {
+    "ulke": "İtalya",
+    "yil": 2024,
+    "sicaklik": 14.4,
+    "yagis": 750.0
+  },
+  {
+    "ulke": "İtalya",
+    "yil": 2025,
+    "sicaklik": 14.48,
+    "yagis": 686.17
+  },
+  {
+    "ulke": "Yunanistan",
+    "yil": 2020,
+    "sicaklik": 15.06,
+    "yagis": 652.0
+  },
+  {
+    "ulke": "Yunanistan",
+    "yil": 2021,
+    "sicaklik": 15.06,
+    "yagis": 652.0
+  },
+  {
+    "ulke": "Yunanistan",
+    "yil": 2022,
+    "sicaklik": 15.71,
+    "yagis": 558.42
+  },
+  {
+    "ulke": "Yunanistan",
+    "yil": 2023,
+    "sicaklik": 15.71,
+    "yagis": 617.84
+  },
+  {
+    "ulke": "Yunanistan",
+    "yil": 2024,
+    "sicaklik": 15.8,
+    "yagis": 600.0
+  },
+  {
+    "ulke": "Yunanistan",
+    "yil": 2025,
+    "sicaklik": 15.76,
+    "yagis": 592.09
+  },
+  {
+    "ulke": "Türkiye",
+    "yil": 2020,
+    "sicaklik": 13.1,
+    "yagis": 574.0
+  },
+  {
+    "ulke": "Türkiye",
+    "yil": 2021,
+    "sicaklik": 13.3,
+    "yagis": 574.0
+  },
+  {
+    "ulke": "Türkiye",
+    "yil": 2022,
+    "sicaklik": 12.26,
+    "yagis": 529.14
+  },
+  {
+    "ulke": "Türkiye",
+    "yil": 2023,
+    "sicaklik": 12.92,
+    "yagis": 648.89
+  },
+  {
+    "ulke": "Türkiye",
+    "yil": 2024,
+    "sicaklik": 13.0,
+    "yagis": 600.0
+  },
+  {
+    "ulke": "Türkiye",
+    "yil": 2025,
+    "sicaklik": 12.76,
+    "yagis": 623.27
+  },
+  {
+    "ulke": "Tunus",
+    "yil": 2020,
+    "sicaklik": 20.0,
+    "yagis": 207.0
+  },
+  {
+    "ulke": "Tunus",
+    "yil": 2021,
+    "sicaklik": 20.0,
+    "yagis": 207.0
+  },
+  {
+    "ulke": "Tunus",
+    "yil": 2022,
+    "sicaklik": 21.44,
+    "yagis": 146.28
+  },
+  {
+    "ulke": "Tunus",
+    "yil": 2023,
+    "sicaklik": 21.2,
+    "yagis": 222.17
+  },
+  {
+    "ulke": "Tunus",
+    "yil": 2024,
+    "sicaklik": 21.25,
+    "yagis": 200.0
+  },
+  {
+    "ulke": "Tunus",
+    "yil": 2025,
+    "sicaklik": 21.33,
+    "yagis": 196.84
+  },
+  {
+    "ulke": "Fas",
+    "yil": 2020,
+    "sicaklik": 17.5,
+    "yagis": 346.0
+  },
+  {
+    "ulke": "Fas",
+    "yil": 2021,
+    "sicaklik": 17.5,
+    "yagis": 346.0
+  },
+  {
+    "ulke": "Fas",
+    "yil": 2022,
+    "sicaklik": 17.7,
+    "yagis": 258.52
+  },
+  {
+    "ulke": "Fas",
+    "yil": 2023,
+    "sicaklik": 17.9,
+    "yagis": 217.18
+  },
+  {
+    "ulke": "Fas",
+    "yil": 2024,
+    "sicaklik": 18.0,
+    "yagis": 230.0
+  },
+  {
+    "ulke": "Fas",
+    "yil": 2025,
+    "sicaklik": 18.16,
+    "yagis": 235.23
+  },
+  {
+    "ulke": "Cezayir",
+    "yil": 2020,
+    "sicaklik": 23.0,
+    "yagis": 89.0
+  },
+  {
+    "ulke": "Cezayir",
+    "yil": 2021,
+    "sicaklik": 23.0,
+    "yagis": 89.0
+  },
+  {
+    "ulke": "Cezayir",
+    "yil": 2022,
+    "sicaklik": 23.5,
+    "yagis": 61.0
+  },
+  {
+    "ulke": "Cezayir",
+    "yil": 2023,
+    "sicaklik": 23.8,
+    "yagis": 72.0
+  },
+  {
+    "ulke": "Cezayir",
+    "yil": 2024,
+    "sicaklik": 24.0,
+    "yagis": 75.0
+  },
+  {
+    "ulke": "Cezayir",
+    "yil": 2025,
+    "sicaklik": 24.32,
+    "yagis": 69.33
+  },
+  {
+    "ulke": "Mısır",
+    "yil": 2020,
+    "sicaklik": 22.0,
+    "yagis": 18.0
+  },
+  {
+    "ulke": "Mısır",
+    "yil": 2021,
+    "sicaklik": 22.0,
+    "yagis": 18.0
+  },
+  {
+    "ulke": "Mısır",
+    "yil": 2022,
+    "sicaklik": 23.2,
+    "yagis": 23.16
+  },
+  {
+    "ulke": "Mısır",
+    "yil": 2023,
+    "sicaklik": 23.95,
+    "yagis": 21.69
+  },
+  {
+    "ulke": "Mısır",
+    "yil": 2024,
+    "sicaklik": 24.1,
+    "yagis": 22.0
+  },
+  {
+    "ulke": "Mısır",
+    "yil": 2025,
+    "sicaklik": 24.91,
+    "yagis": 22.28
+  },
+  {
+    "ulke": "Portekiz",
+    "yil": 2020,
+    "sicaklik": 16.3,
+    "yagis": 850.0
+  },
+  {
+    "ulke": "Portekiz",
+    "yil": 2021,
+    "sicaklik": 16.3,
+    "yagis": 850.0
+  },
+  {
+    "ulke": "Portekiz",
+    "yil": 2022,
+    "sicaklik": 17.03,
+    "yagis": 750.0
+  },
+  {
+    "ulke": "Portekiz",
+    "yil": 2023,
+    "sicaklik": 17.05,
+    "yagis": 700.0
+  },
+  {
+    "ulke": "Portekiz",
+    "yil": 2024,
+    "sicaklik": 16.49,
+    "yagis": 600.0
+  },
+  {
+    "ulke": "Portekiz",
+    "yil": 2025,
+    "sicaklik": 16.88,
+    "yagis": 555.0
+  },
+  {
+    "ulke": "Suriye",
+    "yil": 2020,
+    "sicaklik": 18.0,
+    "yagis": 300.0
+  },
+  {
+    "ulke": "Suriye",
+    "yil": 2021,
+    "sicaklik": 18.0,
+    "yagis": 300.0
+  },
+  {
+    "ulke": "Suriye",
+    "yil": 2022,
+    "sicaklik": 19.17,
+    "yagis": 275.72
+  },
+  {
+    "ulke": "Suriye",
+    "yil": 2023,
+    "sicaklik": 19.75,
+    "yagis": 298.16
+  },
+  {
+    "ulke": "Suriye",
+    "yil": 2024,
+    "sicaklik": 20.0,
+    "yagis": 290.0
+  },
+  {
+    "ulke": "Suriye",
+    "yil": 2025,
+    "sicaklik": 20.73,
+    "yagis": 286.22
+  }
+]

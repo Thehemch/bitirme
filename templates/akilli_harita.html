@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>🗺️ Akıllı Harita</title>
+
+  <!-- CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <link rel="stylesheet" href="/static/css/custom.css" />
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+
+  <!-- JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+</head>
+<body>
+
+<!-- NAVBAR (Tüm sayfalarla birebir aynı) -->
+<nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top shadow-sm">
+  <div class="container">
+    <a class="navbar-brand d-flex align-items-center fw-bold text-success" href="/">
+      <img src="/static/img/logo.png" alt="Logo" class="logo-img me-2" />
+      ERKAN ZEYTİNCİLİK
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+      <ul class="navbar-nav mb-2 mb-lg-0">
+        <li class="nav-item"><a class="nav-link" href="/">ANASAYFA</a></li>
+        <li class="nav-item"><a class="nav-link" href="/dashboard">DASHBOARD</a></li>
+        <li class="nav-item"><a class="nav-link" href="/tahmin">TAHMİNLEME</a></li>
+        <li class="nav-item"><a class="nav-link active text-success" href="/akilli_harita">AKILLI HARİTA</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">RAPOR</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">CONTACT</a></li>
+      </ul>
+      <a class="btn btn-success ms-3" href="#">Get Started</a>
+    </div>
+  </div>
+</nav>
+
+<!-- HARİTA ALANI -->
+<div class="container-fluid" style="margin-top: 100px;">
+  <h2 class="text-center fw-bold mb-4">🗺️ 2025 İklimsel Risk Haritası</h2>
+  <div id="harita" style="height: 450px; width: 75%; margin: 0 auto;" class="rounded shadow-sm"></div>
+
+</div>
+
+
+<div class="container my-5" id="grafik-alani" style="display: none;">
+  <h4 class="text-center fw-bold mb-4" id="grafik-baslik"></h4>
+
+  <div class="row justify-content-center">
+    <div class="col-md-6 mb-4">
+      <h5 class="text-center text-secondary">Sıcaklık (°C)</h5>
+      <canvas id="sicaklikChart" height="200"></canvas>
+    </div>
+    <div class="col-md-6 mb-4">
+      <h5 class="text-center text-secondary">Yağış (mm)</h5>
+      <canvas id="yagisChart" height="200"></canvas>
+    </div>
+  </div>
+</div>
+
+
+
+<!-- HARİTA KODU -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+  const map = L.map('harita').setView([38.9637, 35.2433], 4);
+
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '&copy; OpenStreetMap katkıcıları'
+  }).addTo(map);
+
+  let iklimVerisi = [];
+
+  fetch("/static/data/iklim_yagis_2020_2024.json")
+    .then(res => res.json())
+    .then(data => {
+      iklimVerisi = data;
+    });
+
+  fetch("/static/data/2025_iklim_yagis_tahmin_risk_WRI_normalized.json")
+    .then(res => res.json())
+    .then(riskData => {
+      fetch("/static/data/countries.geo.json")
+        .then(res => res.json())
+        .then(worldData => {
+          L.geoJSON(worldData, {
+            style: feature => {
+              const ulkeAdi = feature.properties.name;
+              const risk = getRiskScore(ulkeAdi, riskData);
+              return {
+                fillColor: getColor(risk),
+                weight: 1,
+                opacity: 1,
+                color: 'white',
+                dashArray: '3',
+                fillOpacity: 0.7
+              };
+            },
+            onEachFeature: (feature, layer) => {
+              const ingilizceAd = feature.properties.name;
+              const ulkeAdi = getTurkceAd(ingilizceAd);
+              const risk = getRiskScore(ingilizceAd, riskData);
+
+              if (risk !== null) {
+                layer.bindTooltip(
+                  `<strong>${ulkeAdi}</strong><br>Risk Skoru: ${risk}`,
+                  { sticky: true, direction: 'top' }
+                );
+              }
+
+              layer.on('click', () => {
+                gosterGrafik(ulkeAdi);
+              });
+            }
+          }).addTo(map);
+        });
+    });
+
+  function getRiskScore(geojsonName, data) {
+    const isimMap = {
+      "Turkey": "Türkiye",
+      "Greece": "Yunanistan",
+      "Spain": "İspanya",
+      "Italy": "İtalya",
+      "Tunisia": "Tunus",
+      "Portugal": "Portekiz",
+      "Egypt": "Mısır",
+      "Morocco": "Fas",
+      "Algeria": "Cezayir",
+      "Syria": "Suriye"
+    };
+    const jsonUlke = isimMap[geojsonName];
+    if (!jsonUlke) return null;
+    const match = data.find(item => item.ulke === jsonUlke);
+    return match ? match.risk_skoru_normalized : null;
+  }
+
+  function getColor(risk) {
+    if (risk === null) return '#ccc';
+    if (risk > 90) return '#8B0000';
+    if (risk > 70) return 'red';
+    if (risk > 50) return 'orange';
+    if (risk > 30) return 'yellow';
+    if (risk > 10) return '#ADFF2F';
+    return 'green';
+  }
+
+  function getTurkceAd(name) {
+    const isimMap = {
+      "Turkey": "Türkiye",
+      "Greece": "Yunanistan",
+      "Spain": "İspanya",
+      "Italy": "İtalya",
+      "Tunisia": "Tunus",
+      "Portugal": "Portekiz",
+      "Egypt": "Mısır",
+      "Morocco": "Fas",
+      "Algeria": "Cezayir",
+      "Syria": "Suriye"
+    };
+    return isimMap[name] || name;
+  }
+
+  function gosterGrafik(ulkeAdi) {
+  const filtreli = iklimVerisi.filter(item => item.ulke === ulkeAdi);
+  if (filtreli.length === 0) {
+    alert(`Veri bulunamadı: ${ulkeAdi}`);
+    return;
+  }
+
+  const yillar = filtreli.map(v => v.yil);
+  const sicaklik = filtreli.map(v => v.sicaklik);
+  const yagis = filtreli.map(v => v.yagis);
+  const minSicaklik = Math.min(...sicaklik);
+  const maxSicaklik = Math.max(...sicaklik);
+  const minYagis = Math.min(...yagis);
+  const maxYagis = Math.max(...yagis);
+
+
+  // Nokta rengi → 2025 kırmızı
+  const renkSicaklik = filtreli.map(v => v.yil === 2025 ? 'red' : 'orange');
+  const renkYagis = filtreli.map(v => v.yil === 2025 ? 'red' : 'blue');
+
+  // Alan dolgusu rengi → 2025'te biraz daha koyu
+  const dolguSicaklik = filtreli.map(v =>
+    v.yil === 2025 ? 'rgba(255, 0, 0, 0.2)' : 'rgba(255, 165, 0, 0.2)'
+  );
+  const dolguYagis = filtreli.map(v =>
+    v.yil === 2025 ? 'rgba(255, 0, 0, 0.2)' : 'rgba(0, 123, 255, 0.2)'
+  );
+
+  document.getElementById("grafik-baslik").innerText = `${ulkeAdi} - 2020–2025 Sıcaklık ve Yağış`;
+  document.getElementById("grafik-alani").style.display = "block";
+
+  if (window.sicaklikChart && typeof window.sicaklikChart.destroy === 'function') {
+    window.sicaklikChart.destroy();
+  }
+  if (window.yagisChart && typeof window.yagisChart.destroy === 'function') {
+    window.yagisChart.destroy();
+  }
+
+  window.sicaklikChart = new Chart(document.getElementById("sicaklikChart"), {
+    type: 'line',
+    data: {
+      labels: yillar,
+      datasets: [{
+        label: 'Sıcaklık (°C)',
+        data: sicaklik,
+        borderColor: 'orange',
+        backgroundColor: dolguSicaklik,
+        pointBackgroundColor: renkSicaklik,
+        pointRadius: 5,
+        pointHoverRadius: 8,
+        pointBorderWidth: 2,
+        fill: true,
+        tension: 0.4
+      }]
+    },
+    options: {
+      responsive: true,
+      plugins: {
+        legend: { position: 'top' },
+        tooltip: { mode: 'index', intersect: false }
+      },
+      scales: {
+        y: {
+          min:minSicaklik - 1,
+          max: maxSicaklik + 1,
+          beginAtZero: true,
+          title: { display: true, text: 'Sıcaklık (°C)' }
+        }
+      }
+    }
+  });
+
+  window.yagisChart = new Chart(document.getElementById("yagisChart"), {
+    type: 'line',
+    data: {
+      labels: yillar,
+      datasets: [{
+        label: 'Yağış (mm)',
+        data: yagis,
+        borderColor: 'blue',
+        backgroundColor: dolguYagis,
+        pointBackgroundColor: renkYagis,
+        pointRadius: 5,
+        pointHoverRadius: 8,
+        pointBorderWidth: 2,
+        fill: true,
+        tension: 0.4
+      }]
+    },
+    options: {
+      responsive: true,
+      plugins: {
+        legend: { position: 'top' },
+        tooltip: { mode: 'index', intersect: false }
+      },
+      scales: {
+        y: {
+          min: minYagis - 10,
+          max: maxYagis + 10,
+          beginAtZero: true,
+          title: { display: true, text: 'Yağış (mm)' }
+        }
+      }
+    }
+  });
+}
+
+
+</script>
+
+</body>
+</html>
