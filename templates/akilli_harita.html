@@ -63,6 +63,25 @@
     </div>
   </div>
 </div>
+<!-- 2. HARİTA: Verimlilik Isı Haritası -->
+<div class="container-fluid mt-5">
+  <h2 class="text-center fw-bold mb-4">🟫 2025 Toprak Verimliliği Risk Haritası</h2>
+  <div id="verimlilik-harita" style="height: 450px; width: 75%; margin: 0 auto;" class="rounded shadow-sm"></div>
+</div>
+
+<!-- GRAFİK ALANI: Verimlilik Zaman Serisi -->
+<div class="container my-5" id="verimlilik-grafik-alani" style="display: none;">
+  <h4 class="text-center fw-bold mb-4" id="verimlilik-grafik-baslik"></h4>
+
+  <div class="row justify-content-center">
+    <div class="col-md-6 mb-4">
+      <h5 class="text-center text-secondary">Verimlilik (bin ton / hektar)</h5>
+      <canvas id="verimlilikChart" height="200" style="width: 100%; max-width: 600px;"></canvas>
+    </div>
+  </div>
+</div>
+
+
 
 
 
@@ -273,6 +292,147 @@
     }
   });
 }
+
+// === 2. Harita: Verimlilik Risk Skoru Isı Haritası ===
+
+const verimlilikHarita = L.map('verimlilik-harita').setView([38.9637, 35.2433], 4);
+
+L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+  attribution: '&copy; OpenStreetMap katkıcıları'
+}).addTo(verimlilikHarita);
+
+let verimlilikVerisi = [];
+
+fetch("/static/data/verimlilik_2020_2025_tahminli.json")
+  .then(res => res.json())
+  .then(data => {
+    verimlilikVerisi = data;
+  });
+
+fetch("/static/data/verimlilik_skoru_2025.json")
+  .then(res => res.json())
+  .then(riskData => {
+    fetch("/static/data/countries.geo.json")
+      .then(res => res.json())
+      .then(geoData => {
+        L.geoJSON(geoData, {
+          style: feature => {
+            const ulkeAdi = feature.properties.name;
+            const risk = getVerimlilikSkoru(ulkeAdi, riskData);
+            return {
+              fillColor: getColorVerimlilik(risk),
+              weight: 1,
+              opacity: 1,
+              color: 'white',
+              dashArray: '3',
+              fillOpacity: 0.7
+            };
+          },
+          onEachFeature: (feature, layer) => {  
+            const ingilizceAd = feature.properties.name;
+            const ulkeAdi = getTurkceAd(ingilizceAd);
+            const risk = getVerimlilikSkoru(ingilizceAd, riskData);
+            if (risk !== null) {
+              layer.bindTooltip(
+                `<strong>${ulkeAdi}</strong><br>Risk Skoru: ${risk}`,
+                { sticky: true, direction: 'top' }
+              );
+              layer.on("click", () => {
+                gosterVerimlilikGrafik(ulkeAdi);
+              });
+            }
+          }
+        }).addTo(verimlilikHarita);
+      });
+  });
+
+function getVerimlilikSkoru(geojsonName, data) {
+  const isimMap = {
+    "Turkey": "Türkiye",
+    "Greece": "Yunanistan",
+    "Spain": "İspanya",
+    "Italy": "İtalya",
+    "Tunisia": "Tunus",
+    "Portugal": "Portekiz",
+    "Egypt": "Mısır",
+    "Morocco": "Fas",
+    "Algeria": "Cezayir",
+    "Syria": "Suriye"
+  };
+  const jsonUlke = isimMap[geojsonName];
+  if (!jsonUlke) return null;
+  const match = data.find(item => item.ulke === jsonUlke);
+  return match ? match.risk_skoru_normalized : null;
+}
+
+function getColorVerimlilik(risk) {
+  if (risk === null) return '#ccc';
+  if (risk > 90) return '#8B0000';
+  if (risk > 70) return 'red';
+  if (risk > 50) return 'orange';
+  if (risk > 30) return 'yellow';
+  if (risk > 10) return '#ADFF2F';
+  return 'green';
+}
+
+function gosterVerimlilikGrafik(ulkeAdi) {
+  const filtreli = verimlilikVerisi.filter(item => item.ulke === ulkeAdi);
+  if (filtreli.length === 0) {
+    alert(`${ulkeAdi} için veri bulunamadı.`);
+    return;
+  }
+
+  const yillar = filtreli.map(v => v.yil);
+  const verimlilikDegerleri = filtreli.map(v => v.verimlilik);
+  const renkler = filtreli.map(v => v.yil === 2025 ? 'red' : 'green');
+  const arkaPlan = filtreli.map(v => v.yil === 2025 ? 'rgba(255, 0, 0, 0.2)' : 'rgba(0, 128, 0, 0.2)');
+
+  const minVerimlilik = Math.min(...verimlilikDegerleri);
+  const maxVerimlilik = Math.max(...verimlilikDegerleri);
+
+  document.getElementById("verimlilik-grafik-baslik").innerText = `${ulkeAdi} - 2020–2025 Verimlilik (bin ton / hektar)`;
+  document.getElementById("verimlilik-grafik-alani").style.display = "block";
+
+  if (window.verimlilikChart && typeof window.verimlilikChart.destroy === 'function') {
+    window.verimlilikChart.destroy();
+  }
+
+  window.verimlilikChart = new Chart(document.getElementById("verimlilikChart"), {
+    type: 'line',
+    data: {
+      labels: yillar,
+      datasets: [{
+        label: 'Verimlilik (bin ton / hektar)',
+        data: verimlilikDegerleri,
+        borderColor: 'green',
+        backgroundColor: arkaPlan,
+        pointBackgroundColor: renkler,
+        pointRadius: 5,
+        pointHoverRadius: 8,
+        pointBorderWidth: 2,
+        fill: true,
+        tension: 0.4
+      }]
+    },
+    options: {
+      responsive: true,
+      plugins: {
+        legend: { position: 'top' },
+        tooltip: { mode: 'index', intersect: false }
+      },
+      scales: {
+        y: {
+          min: minVerimlilik - 0.2,
+          max: maxVerimlilik + 0.2,
+          title: { display: true, text: 'Verimlilik (bin ton / hektar)' }
+        }
+      }
+    }
+  });
+}
+
+
+
 
 
 </script>

@@ -2,51 +2,51 @@
   {
     "ulke": "İspanya",
     "risk_skoru_raw": 2.8,
-    "risk_skoru_normalized": 100.0
+    "risk_skoru_normalized": 0.0
   },
   {
     "ulke": "İtalya",
     "risk_skoru_raw": 1.998,
-    "risk_skoru_normalized": 61.88
+    "risk_skoru_normalized": 38.12
   },
   {
     "ulke": "Yunanistan",
     "risk_skoru_raw": 2.632,
-    "risk_skoru_normalized": 92.02
+    "risk_skoru_normalized": 7.98
   },
   {
     "ulke": "Türkiye",
     "risk_skoru_raw": 2.07,
-    "risk_skoru_normalized": 65.3
+    "risk_skoru_normalized": 34.7
   },
   {
     "ulke": "Fas",
     "risk_skoru_raw": 1.366,
-    "risk_skoru_normalized": 31.84
+    "risk_skoru_normalized": 68.16
   },
   {
     "ulke": "Mısır",
     "risk_skoru_raw": 2.326,
-    "risk_skoru_normalized": 77.47
+    "risk_skoru_normalized": 22.53
   },
   {
     "ulke": "Tunus",
     "risk_skoru_raw": 0.696,
-    "risk_skoru_normalized": 0.0
+    "risk_skoru_normalized": 100.0
   },
   {
     "ulke": "Portekiz",
     "risk_skoru_raw": 2.134,
-    "risk_skoru_normalized": 68.35
+    "risk_skoru_normalized": 31.65
   },
   {
     "ulke": "Cezayir",
     "risk_skoru_raw": 1.792,
-    "risk_skoru_normalized": 52.09
+    "risk_skoru_normalized": 47.91
   },
   {
     "ulke": "Suriye",
     "risk_skoru_raw": 1.042,
-    "risk_skoru_normalized": 16.44
+    "risk_skoru_normalized": 83.56
   }
 ]
