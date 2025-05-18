@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>📊 Ülke Bazlı Rapor</title>
+
+  <!-- Bootstrap + FontAwesome + CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <link rel="stylesheet" href="/static/css/custom.css" />
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg bg-white fixed-top shadow-sm">
+  <div class="container">
+    <!-- Sol Logo + Marka -->
+    <a class="navbar-brand d-flex align-items-center fw-bold text-success" href="/">
+      <img src="/static/img/logo.png" alt="Logo" class="logo-img me-2" />
+      ERKAN ZEYTİNCİLİK
+    </a>
+
+    <!-- Toggle (mobil) -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMenu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Menü -->
+    <div class="collapse navbar-collapse justify-content-end" id="navbarMenu">
+      <ul class="navbar-nav mb-2 mb-lg-0 align-items-center">
+        <li class="nav-item"><a class="nav-link fw-bold text-success" href="/">ANASAYFA</a></li>
+        <li class="nav-item"><a class="nav-link" href="/dashboard">DASHBOARD</a></li>
+        <li class="nav-item"><a class="nav-link" href="/tahmin">TAHMİNLEME</a></li>
+        <li class="nav-item"><a class="nav-link" href="/akilli_harita">AKILLI HARİTA</a></li>
+        <li class="nav-item"><a class="nav-link active fw-bold text-success" href="/rapor">RAPOR</a></li>
+        <li class="nav-item"><a class="nav-link" href="#contact">CONTACT</a></li>
+        <!-- Sağdaki buton -->
+        <li class="nav-item ms-3">
+          <a href="#" class="btn btn-success text-white fw-bold px-3">Get Started</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+
+<!-- ANA İÇERİK -->
+<div class="container" style="margin-top: 100px;">
+  <h2 class="text-center fw-bold mb-5 text-success">📊 Ülke Bazlı Yatırım Raporu</h2>
+
+  <div class="row g-4 mb-4">
+  <!-- İSPANYA KARTI -->
+  <div class="col-md-6">
+    <div class="card border border-success h-100 shadow-sm">
+      <div class="card-body">
+        <h5 class="card-title fw-bold text-success">🇪🇸 İspanya</h5>
+        <p class="card-text">
+          <strong>✅ Yatırım Değerlendirmesi</strong><br>
+          İspanya, hem zeytin hem zeytinyağı sektöründe tartışmasız dünya lideridir.<br>
+          Yüksek üretim gücü, dış ticaret fazlası, verimli toprakları ve düşük iklim riski, ülkeyi yatırım için benzersiz bir fırsat haline getirmektedir.<br>
+          Devletin tarım politikalarına ayırdığı 12.5 milyar dolarlık destek, sektördeki sürdürülebilir büyümeyi garanti altına almaktadır.<br>
+          <strong>Sonuç:</strong> Stratejik yatırım için en güçlü aday ülkelerden biridir.
+        </p>
+        <button class="btn btn-outline-success" type="button" data-bs-toggle="collapse" data-bs-target="#detayIspanya">
+          📄 Detayları Gör
+        </button>
+
+        <div class="collapse mt-3" id="detayIspanya">
+          <div class="card card-body bg-light">
+            <p><strong>🫒 Zeytin Sektörü Özeti (2020–2025)</strong></p>
+            <ul>
+              <li>🌍 Dünya genelinde zeytin üretiminde 2. sırada yer almaktadır.</li>
+              <li>🫒 2020–2025 toplam üretim yaklaşık 6 milyon ton civarındadır.</li>
+              <li>🍽️ Avrupa’daki en yüksek iç tüketim oranına sahiptir.</li>
+              <li>📦 Global ihracatın %18’ini tek başına gerçekleştirmektedir.</li>
+              <li>📥 İthalat bağımlılığı düşüktür, yılda ortalama 30 bin ton ithalat yapmaktadır.</li>
+            </ul>
+
+            <p class="mt-3"><strong>🫗 Zeytinyağı Sektörü Özeti</strong></p>
+            <ul>
+              <li>🌍 Zeytinyağı üretiminde de dünya lideridir.</li>
+              <li>📤 Yıllık ortalama 700 bin tonun üzerinde üretimle net ihracatçı konumundadır.</li>
+              <li>🤝 İtalya ile birlikte global pazarın en büyük iki oyuncusundan biridir.</li>
+              <li>💰 2025 yılı zeytinyağı fiyat tahmini: $3.40/kg</li>
+            </ul>
+
+            <p class="mt-3"><strong>🌿 Destekleyici Göstergeler</strong></p>
+            <ul>
+              <li>🌡️ İklim Riski Skoru (2025): 4.32 → Düşük risk grubu</li>
+              <li>🌱 Toprak Verimliliği: Ortalama 2.85 ton/hektar</li>
+              <li>🏛️ Devlet Desteği: Yaklaşık 12.5 milyar dolar</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- BURAYA SONRA İTALYA KARTI GELECEK -->
+  <div class="col-md-6">
+  <div class="card border border-success h-100 shadow-sm">
+    <div class="card-body">
+      <h5 class="card-title fw-bold text-success">🇮🇹 İtalya</h5>
+      <p class="card-text">
+        <strong>✅ Yatırım Değerlendirmesi</strong><br>
+        İtalya, zeytinyağı üretiminde yüksek kalite ve marka gücüyle öne çıkmaktadır.<br>
+        2025 yılı fiyat tahmini, Avrupa’nın en yükseklerinden biridir.<br>
+        Düşük iklim riski, sağlam devlet destekleri ve güçlü ihracat altyapısı, ülkeyi yatırım açısından cazip hale getirmektedir.<br>
+        <strong>Sonuç:</strong> Yüksek kalite segmentine odaklanmak isteyen yatırımcılar için öncelikli ülkedir.
+      </p>
+      <button class="btn btn-outline-success" type="button" data-bs-toggle="collapse" data-bs-target="#detayItalya">
+        📄 Detayları Gör
+      </button>
+
+      <div class="collapse mt-3" id="detayItalya">
+        <div class="card card-body bg-light">
+          <p><strong>🫒 Zeytin Sektörü Özeti (2020–2025)</strong></p>
+          <ul>
+            <li>🌍 Zeytin üretiminde dünya sıralamasında 3. sıradadır.</li>
+            <li>🫒 2020–2025 toplam üretimi yaklaşık 3.500 bin ton civarındadır.</li>
+            <li>🍽️ İç tüketim yüksektir, tüketici alışkanlıkları gelenekseldir.</li>
+            <li>📦 İhracat payı %12 seviyesindedir; Avrupa ve ABD pazarına güçlü satış yapılmaktadır.</li>
+            <li>📥 İthalat oranı düşüktür, yerli üretim iç talebi karşılamaktadır.</li>
+          </ul>
+
+          <p class="mt-3"><strong>🫗 Zeytinyağı Sektörü Özeti</strong></p>
+          <ul>
+            <li>🌍 Zeytinyağı üretiminde dünya 2.si konumundadır.</li>
+            <li>📤 Yıllık ortalama 450 bin ton üretim ile yüksek kaliteli ihracat yapılmaktadır.</li>
+            <li>🧴 Marka değeriyle zeytinyağında dünya çapında güven simgesidir.</li>
+            <li>💰 2025 yılı zeytinyağı fiyat tahmini: 5.39 €/kg</li>
+          </ul>
+
+          <p class="mt-3"><strong>🌿 Destekleyici Göstergeler</strong></p>
+          <ul>
+            <li>🌡️ İklim Riski Skoru (2025): 0.00 → Minimum risk</li>
+            <li>🌱 Toprak Verimliliği: Ortalama 1.70 ton/hektar</li>
+            <li>🏛️ Devlet Desteği: Yaklaşık 13 milyar dolar</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- BURAYA SONRA TÜRKİYE KARTI GELECEK -->
+  <div class="col-md-6">
+  <div class="card border border-success h-100 shadow-sm">
+    <div class="card-body">
+      <h5 class="card-title fw-bold text-success">🇹🇷 Türkiye</h5>
+      <p class="card-text">
+        <strong>✅ Yatırım Değerlendirmesi</strong><br>
+        Türkiye, üretim gücü ve iç tüketim potansiyeliyle dikkat çeken ülkelerden biridir.<br>
+        İklim riski orta seviyede seyretmektedir.<br>
+        Toprak verimliliği iyi düzeydedir.<br>
+        Devlet destekleri sınırlı olsa da üretim altyapısı güçlüdür.<br>
+        <strong>Sonuç:</strong> Uygun stratejilerle yatırım yapılabilir ülkelerden biridir.
+      </p>
+      <button class="btn btn-outline-success" type="button" data-bs-toggle="collapse" data-bs-target="#detayTurkiye">
+        📄 Detayları Gör
+      </button>
+
+      <div class="collapse mt-3" id="detayTurkiye">
+        <div class="card card-body bg-light">
+          <p><strong>🫒 Zeytin Sektörü Özeti (2020–2025)</strong></p>
+          <ul>
+            <li>🌍 Zeytin üretiminde dünya sıralamasında 4. sıradadır.</li>
+            <li>🫒 2020–2025 toplam üretimi yaklaşık 2.000 bin ton civarındadır.</li>
+            <li>🍽️ Yüksek iç tüketim oranına sahiptir.</li>
+            <li>📦 İhracat oranı orta düzeydedir, son yıllarda artış göstermektedir.</li>
+            <li>📥 İthalat düşüktür, ülke kendi üretimiyle talebi karşılamaktadır.</li>
+          </ul>
+
+          <p class="mt-3"><strong>🫗 Zeytinyağı Sektörü Özeti</strong></p>
+          <ul>
+            <li>🌍 Zeytinyağı üretiminde dünyada 5. sıradadır.</li>
+            <li>📤 Ortalama yıllık üretim 200–250 bin ton aralığındadır.</li>
+            <li>🧴 Ürün kalitesinde gelişme olmasına rağmen markalaşma sınırlıdır.</li>
+            <li>💰 2025 yılı zeytinyağı fiyat tahmini: Yaklaşık 3.00 €/kg</li>
+          </ul>
+
+          <p class="mt-3"><strong>🌿 Destekleyici Göstergeler</strong></p>
+          <ul>
+            <li>🌡️ İklim Riski Skoru (2025): 8.5</li>
+            <li>🌱 Toprak Verimliliği: Ortalama 2.1 ton/hektar</li>
+            <li>🏛️ Devlet Desteği: Yaklaşık 7 milyar dolar</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+    <!-- Yunanistan -->
+    <div class="col-md-6">
+  <div class="card border border-success h-100 shadow-sm">
+    <div class="card-body">
+      <h5 class="card-title fw-bold text-success">🇬🇷 Yunanistan</h5>
+      <p class="card-text">
+        <strong>✅ Yatırım Değerlendirmesi</strong><br>
+        Yunanistan, güçlü üretim altyapısı ve dış pazardaki kalite algısıyla dikkat çekmektedir.<br>
+        Ancak yüksek iklim riski ve verimlilikteki gerileme eğilimi, uzun vadeli sürdürülebilirlik açısından risk oluşturmaktadır.<br>
+        Devlet desteği sınırlı düzeydedir.<br>
+        <strong>Sonuç:</strong> Üretim gücü ve kalite avantajına rağmen, çevresel riskler ve düşen destekler sebebiyle yatırım kararı dikkatli analizle alınmalıdır.
+      </p>
+      <button class="btn btn-outline-success" type="button" data-bs-toggle="collapse" data-bs-target="#detayYunanistan">
+        📄 Detayları Gör
+      </button>
+
+      <div class="collapse mt-3" id="detayYunanistan">
+        <div class="card card-body bg-light">
+          <p><strong>🫒 Zeytin Sektörü Özeti (2020–2025)</strong></p>
+          <ul>
+            <li>🌍 Zeytin üretiminde dünya sıralamasında 5. sıradadır.</li>
+            <li>🫒 2020–2025 toplam üretimi yaklaşık 2.100 bin ton civarındadır.</li>
+            <li>🍽️ Kişi başı tüketim oranı yüksektir.</li>
+            <li>📦 İhracat oranı %9’dur; özellikle Avrupa pazarında güçlüdür.</li>
+            <li>📥 İthalat yok denecek kadar azdır.</li>
+          </ul>
+
+          <p class="mt-3"><strong>🫗 Zeytinyağı Sektörü Özeti</strong></p>
+          <ul>
+            <li>🌍 Zeytinyağı üretiminde dünya sıralamasında 3. sıradadır.</li>
+            <li>📤 Yıllık ortalama 280–320 bin ton zeytinyağı üretimi vardır.</li>
+            <li>🧴 Geleneksel yöntemler ve düşük asit oranıyla yüksek kalite algısı vardır.</li>
+            <li>💰 2025 yılı zeytinyağı fiyat tahmini: Yaklaşık 3.00 €/kg</li>
+          </ul>
+
+          <p class="mt-3"><strong>🌿 Destekleyici Göstergeler</strong></p>
+          <ul>
+            <li>🌡️ İklim Riski Skoru (2025): 14.1</li>
+            <li>🌱 Toprak Verimliliği: Ortalama 1.95 ton/hektar (gerileyen eğilimde)</li>
+            <li>🏛️ Devlet Desteği: Yaklaşık 4.3 milyar dolar</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+  <div class="col-md-6">
+  <div class="card border border-success h-100 shadow-sm">
+    <div class="card-body">
+      <h5 class="card-title fw-bold text-success">🇹🇳 Tunus</h5>
+      <p class="card-text">
+        <strong>✅ Yatırım Değerlendirmesi</strong><br>
+        Tunus, zeytin üretiminde en düşük sıralamada yer almasına rağmen, ihracat odaklı bir yapıya sahiptir.<br>
+        Ancak iklim riski son derece yüksektir ve toprak verimliliği dünya ortalamasının çok altındadır.<br>
+        Devlet desteğiyle ilgili güncel ve doğrulanmış bir veri bulunmamaktadır.<br>
+        <strong>Sonuç:</strong> Üretim kapasitesi sınırlı, çevresel riskleri yüksek bir ülke olup; yatırım yapılacaksa sadece kısa vadeli ve dış pazar odaklı stratejiler önerilmektedir.
+      </p>
+      <button class="btn btn-outline-success" type="button" data-bs-toggle="collapse" data-bs-target="#detayTunus">
+        📄 Detayları Gör
+      </button>
+
+      <div class="collapse mt-3" id="detayTunus">
+        <div class="card card-body bg-light">
+          <p><strong>🫒 Zeytin Sektörü Özeti (2020–2025)</strong></p>
+          <ul>
+            <li>🌍 Zeytin üretiminde dünya sıralamasında sonuncudur (6. sırada).</li>
+            <li>🫒 2020–2025 toplam üretimi yaklaşık 1.400 bin ton civarındadır.</li>
+            <li>🍽️ İç tüketim düşüktür; üretimin büyük kısmı ihracata yöneliktir.</li>
+            <li>📦 İhracat oranı yüksektir, dış pazara odaklı üretim yapılmaktadır.</li>
+            <li>📥 İthalat yok denecek kadar azdır.</li>
+          </ul>
+
+          <p class="mt-3"><strong>🫗 Zeytinyağı Sektörü Özeti</strong></p>
+          <ul>
+            <li>🌍 Zeytinyağı üretiminde dünya sıralamasında 4. sıradadır.</li>
+            <li>📤 Ortalama yıllık üretim 200–230 bin ton aralığındadır.</li>
+            <li>🧴 İhracat çoğunlukla dökme ve markasız olarak gerçekleşmektedir.</li>
+            <li>💰 2025 yılı zeytinyağı fiyat tahmini: Yaklaşık 3.00 €/kg</li>
+          </ul>
+
+          <p class="mt-3"><strong>🌿 Destekleyici Göstergeler</strong></p>
+          <ul>
+            <li>🌡️ İklim Riski Skoru (2025): 73.41</li>
+            <li>🌱 Toprak Verimliliği: Ortalama 0.4 ton/hektar</li>
+            <li>🏛️ Devlet Desteği: Veri bulunmamaktadır.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+    <div class="col-md-6">
+  <div class="card border border-success h-100 shadow-sm">
+    <div class="card-body">
+      <h5 class="card-title fw-bold text-success">🇪🇬 Mısır</h5>
+      <p class="card-text">
+        <strong>✅ Yatırım Değerlendirmesi</strong><br>
+        Mısır, dünya zeytin üretiminde lider konumda olmasına rağmen, çok düşük toprak verimliliği ve son derece yüksek iklim riski nedeniyle sürdürülebilirlik açısından ciddi zorluklar barındırmaktadır.<br>
+        Zeytinyağı sektörü iç pazara odaklıdır; dış pazarda yeterince güçlü değildir.<br>
+        Devlet desteğine dair açık ve güncel veri bulunmamaktadır.<br>
+        <strong>Sonuç:</strong> Üretim hacmi yüksek olsa da, çevresel riskler nedeniyle yatırım açısından dikkatli analiz gerektiren, riskli ülkelerden biridir.
+      </p>
+      <button class="btn btn-outline-success" type="button" data-bs-toggle="collapse" data-bs-target="#detayMisir">
+        📄 Detayları Gör
+      </button>
+
+      <div class="collapse mt-3" id="detayMisir">
+        <div class="card card-body bg-light">
+          <p><strong>🫒 Zeytin Sektörü Özeti (2020–2025)</strong></p>
+          <ul>
+            <li>🌍 Zeytin üretiminde dünya sıralamasında 1. sıradadır.</li>
+            <li>🫒 2020–2025 toplam üretimi yaklaşık 6.200 bin ton civarındadır.</li>
+            <li>🍽️ İç tüketim yüksektir; üretimin önemli bir bölümü iç pazarda tüketilmektedir.</li>
+            <li>📦 İhracat oranı sınırlıdır, üretim büyük ölçüde iç piyasaya yöneliktir.</li>
+            <li>📥 İthalat çok düşüktür, yerli üretim ihtiyacı karşılamaktadır.</li>
+          </ul>
+
+          <p class="mt-3"><strong>🫗 Zeytinyağı Sektörü Özeti</strong></p>
+          <ul>
+            <li>🌍 Zeytinyağı üretiminde dünya sıralamasında 6–7. sıradadır.</li>
+            <li>📤 Üretim genellikle iç tüketimi karşılamaya yöneliktir, dış pazara erişim sınırlıdır.</li>
+            <li>🧴 Markalaşma ve ambalajlı satış düşük seviyededir.</li>
+            <li>💰 2025 yılı zeytinyağı fiyat tahmini: Yaklaşık 3.00 €/kg</li>
+          </ul>
+
+          <p class="mt-3"><strong>🌿 Destekleyici Göstergeler</strong></p>
+          <ul>
+            <li>🌡️ İklim Riski Skoru (2025): 73.41</li>
+            <li>🌱 Toprak Verimliliği: Ortalama 0.4 ton/hektar</li>
+            <li>🏛️ Devlet Desteği: Veri bulunmamaktadır.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</div>
+
+<!-- FOOTER -->
+<footer class="text-center mt-5 mb-3 text-muted">
+  Hazırlayan: Hamza ERKAN | DEÜ Yönetim Bilişim Sistemleri © 2025
+</footer>
+
+<!-- JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

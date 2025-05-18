@@ -46,7 +46,9 @@ def yag_tahminleme():
 def akilli_harita():
     return render_template("akilli_harita.html")
 
-
+@app.route("/rapor")
+def rapor():
+    return render_template("rapor.html")
 
 
 # Dashboard grafik verilerini çekmek için API
