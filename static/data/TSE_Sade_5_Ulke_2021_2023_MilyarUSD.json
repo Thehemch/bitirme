@@ -1,0 +1,77 @@
+[
+  {
+    "Ülke":"Türkiye",
+    "Yıl":2022,
+    "TSE (Milyar USD)":10.2
+  },
+  {
+    "Ülke":"Türkiye",
+    "Yıl":2023,
+    "TSE (Milyar USD)":8.1
+  },
+  {
+    "Ülke":"Türkiye",
+    "Yıl":2024,
+    "TSE (Milyar USD)":6.1
+  },
+  {
+    "Ülke":"İspanya",
+    "Yıl":2022,
+    "TSE (Milyar USD)":11.7
+  },
+  {
+    "Ülke":"İspanya",
+    "Yıl":2023,
+    "TSE (Milyar USD)":12.3
+  },
+  {
+    "Ülke":"İspanya",
+    "Yıl":2024,
+    "TSE (Milyar USD)":12.5
+  },
+  {
+    "Ülke":"İtalya",
+    "Yıl":2022,
+    "TSE (Milyar USD)":12.4
+  },
+  {
+    "Ülke":"İtalya",
+    "Yıl":2023,
+    "TSE (Milyar USD)":12.9
+  },
+  {
+    "Ülke":"İtalya",
+    "Yıl":2024,
+    "TSE (Milyar USD)":13.0
+  },
+  {
+    "Ülke":"Yunanistan",
+    "Yıl":2022,
+    "TSE (Milyar USD)":3.9
+  },
+  {
+    "Ülke":"Yunanistan",
+    "Yıl":2023,
+    "TSE (Milyar USD)":4.2
+  },
+  {
+    "Ülke":"Yunanistan",
+    "Yıl":2024,
+    "TSE (Milyar USD)":4.3
+  },
+  {
+    "Ülke":"Portekiz",
+    "Yıl":2022,
+    "TSE (Milyar USD)":3.1
+  },
+  {
+    "Ülke":"Portekiz",
+    "Yıl":2023,
+    "TSE (Milyar USD)":3.3
+  },
+  {
+    "Ülke":"Portekiz",
+    "Yıl":2024,
+    "TSE (Milyar USD)":3.4
+  }
+]

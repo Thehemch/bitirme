@@ -81,7 +81,21 @@
   </div>
 </div>
 
+<div class="container-fluid mt-5">
+  <h2 class="text-center fw-bold mb-4">💰 2023 Devlet Desteği Risk Haritası</h2>
+  <div id="destek-harita" style="height: 450px; width: 75%; margin: 0 auto;" class="rounded shadow-sm"></div>
+</div>
 
+<!-- GRAFİK ALANI: Devlet Desteği Zaman Serisi -->
+<div class="container my-5" id="destek-grafik-alani" style="display: none;">
+  <h4 class="text-center fw-bold mb-4" id="destek-grafik-baslik"></h4>
+  <div class="row justify-content-center">
+    <div class="col-md-6 mb-4">
+      <h5 class="text-center text-secondary">TSE (Milyar USD)</h5>
+      <canvas id="destekChart" height="200"></canvas>
+    </div>
+  </div>
+</div>
 
 
 
@@ -431,7 +445,130 @@ function gosterVerimlilikGrafik(ulkeAdi) {
   });
 }
 
+const destekHarita = L.map('destek-harita').setView([38.9637, 35.2433], 4);
+L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+  attribution: '&copy; OpenStreetMap katkıcıları'
+}).addTo(destekHarita);
 
+let destekVerisi = [];
+let destekYillikVerisi = [];
+
+fetch("/static/data/devlet_destegi_risk_2023_skala100.json")
+  .then(res => res.json())
+  .then(data => {
+    destekVerisi = data;
+  });
+
+fetch("/static/data/TSE_Sade_5_Ulke_2021_2023_MilyarUSD.json")
+  .then(res => res.json())
+  .then(data => {
+    destekYillikVerisi = data;
+  });
+
+fetch("/static/data/countries.geo.json")
+  .then(res => res.json())
+  .then(worldData => {
+    L.geoJSON(worldData, {
+      style: feature => {
+        const ulkeAdi = getTurkceAd(feature.properties.name);
+        const skor = getDestekSkoru(ulkeAdi);
+        return {
+          fillColor: getDestekColor(skor),
+          weight: 1,
+          opacity: 1,
+          color: 'white',
+          dashArray: '3',
+          fillOpacity: 0.7
+        };
+      },
+      onEachFeature: (feature, layer) => {
+        const ingilizceAd = feature.properties.name;
+        const ulkeAdi = getTurkceAd(ingilizceAd);
+        const skor = getDestekSkoru(ulkeAdi);
+        if (skor !== null) {
+          layer.bindTooltip(`<strong>${ulkeAdi}</strong><br>Yatırım Riski: ${skor}`, {
+            sticky: true,
+            direction: 'top'
+          });
+          layer.on("click", () => {
+            gosterDestekGrafik(ulkeAdi);
+          });
+        }
+      }
+    }).addTo(destekHarita);
+  });
+
+function getDestekSkoru(ulkeAdi) {
+  const match = destekVerisi.find(item => item.ulke === ulkeAdi);
+  return match ? match.yatirim_risk_skoru : null;
+}
+
+function getDestekColor(risk) {
+  if (risk === null) return '#ccc';
+  if (risk > 90) return '#8B0000';
+  if (risk > 70) return 'red';
+  if (risk > 50) return 'yellow';
+  if (risk > 30) return 'orange';
+  if (risk > 10) return '#ADFF2F';
+  return 'green';
+}
+
+function gosterDestekGrafik(ulkeAdi) {
+  const filtreli = destekYillikVerisi.filter(item => item["Ülke"] === ulkeAdi);
+  if (filtreli.length === 0) {
+    alert(`${ulkeAdi} için veri bulunamadı.`);
+    return;
+  }
+
+  const yillar = filtreli.map(v => v.Yıl);
+  const degerler = filtreli.map(v => v["TSE (Milyar USD)"]);
+  const renkler = filtreli.map(v => 'green');
+  const arkaPlan = filtreli.map(v => 'rgba(0, 128, 0, 0.2)');
+
+
+  const minDeger = Math.min(...degerler);
+  const maxDeger = Math.max(...degerler);
+
+  document.getElementById("destek-grafik-baslik").innerText = `${ulkeAdi} - 2022–2024 TSE (Milyar USD)`;
+  document.getElementById("destek-grafik-alani").style.display = "block";
+
+  if (window.destekChart && typeof window.destekChart.destroy === 'function') {
+    window.destekChart.destroy();
+  }
+
+  window.destekChart = new Chart(document.getElementById("destekChart"), {
+    type: 'line',
+    data: {
+      labels: yillar,
+      datasets: [{
+        label: 'TSE (Milyar USD)',
+        data: degerler,
+        borderColor: 'green',
+        backgroundColor: arkaPlan,
+        pointBackgroundColor: renkler,
+        pointRadius: 5,
+        pointHoverRadius: 8,
+        pointBorderWidth: 2,
+        fill: true,
+        tension: 0.4
+      }]
+    },
+    options: {
+      responsive: true,
+      plugins: {
+        legend: { position: 'top' },
+        tooltip: { mode: 'index', intersect: false }
+      },
+      scales: {
+        y: {
+          min: minDeger - 1,
+          max: maxDeger + 1,
+          title: { display: true, text: 'TSE (Milyar USD)' }
+        }
+      }
+    }
+  });
+}
 
 
 

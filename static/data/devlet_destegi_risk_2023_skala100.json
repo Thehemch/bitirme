@@ -1,0 +1,27 @@
+[
+  {
+    "ulke": "Portekiz",
+    "ortalama_destek_milyon": 3.26,
+    "yatirim_risk_skoru": 99
+  },
+  {
+    "ulke": "Türkiye",
+    "ortalama_destek_milyon": 8.14,
+    "yatirim_risk_skoru": 49
+  },
+  {
+    "ulke": "Yunanistan",
+    "ortalama_destek_milyon": 4.13,
+    "yatirim_risk_skoru": 90
+  },
+  {
+    "ulke": "İspanya",
+    "ortalama_destek_milyon": 12.16,
+    "yatirim_risk_skoru": 6
+  },
+  {
+    "ulke": "İtalya",
+    "ortalama_destek_milyon": 12.76,
+    "yatirim_risk_skoru": 0
+  }
+]
