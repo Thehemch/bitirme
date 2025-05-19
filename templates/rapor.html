@@ -34,11 +34,13 @@
         <li class="nav-item"><a class="nav-link" href="/tahmin">TAHMİNLEME</a></li>
         <li class="nav-item"><a class="nav-link" href="/akilli_harita">AKILLI HARİTA</a></li>
         <li class="nav-item"><a class="nav-link active fw-bold text-success" href="/rapor">RAPOR</a></li>
-        <li class="nav-item"><a class="nav-link" href="#contact">CONTACT</a></li>
         <!-- Sağdaki buton -->
-        <li class="nav-item ms-3">
-          <a href="#" class="btn btn-success text-white fw-bold px-3">Get Started</a>
         </li>
+        {% if session.kullanici_adi %}
+        <li class="nav-item ms-3">
+          <a href="/cikis" class="btn btn-outline-danger fw-bold">Çıkış Yap</a>
+        </li>
+        {% endif %}
       </ul>
     </div>
   </div>

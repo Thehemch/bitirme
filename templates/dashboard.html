@@ -28,9 +28,12 @@
         <li class="nav-item"><a class="nav-link" href="/tahmin">TAHMİNLEME</a></li>
         <li class="nav-item"><a class="nav-link" href="/akilli_harita">AKILLI HARİTA</a></li>
         <li class="nav-item"><a class="nav-link" href="/rapor">RAPOR</a></li>
-        <li class="nav-item"><a class="nav-link" href="#">CONTACT</a></li>
+        {% if session.kullanici_adi %}
+        <li class="nav-item ms-3">
+          <a href="/cikis" class="btn btn-outline-danger fw-bold">Çıkış Yap</a>
+        </li>
+        {% endif %}
       </ul>
-      <a class="btn btn-success ms-3" href="#">Get Started</a>
     </div>
   </div>
 </nav>

@@ -1,27 +1,86 @@
-from flask import Flask, render_template, jsonify, request
+from flask import Flask, render_template, request, redirect, url_for, flash, jsonify, session
 import mysql.connector
 
 app = Flask(__name__)
+app.secret_key = 'gizli_anahtar'  # Flash mesaj ve session için
 
 # MySQL bağlantısı
 try:
     db = mysql.connector.connect(
         host="localhost",
         user="root",
-        password="",  # şifre varsa yaz
+        password="",
         database="bitirme"
     )
     print("✅ MySQL bağlantısı başarılı!")
 except mysql.connector.Error as err:
     print("❌ MySQL bağlantı hatası:", err)
 
-
-# Anasayfa
+# 📌 Anasayfa — sadece oturum açan görebilir
 @app.route('/')
 def index():
+    if "kullanici_adi" not in session:
+        return redirect(url_for("giris"))
     return render_template('index.html')
 
-# Dashboard sayfası
+# 📌 Giriş Sayfası
+@app.route("/giris", methods=["GET", "POST"])
+def giris():
+    if request.method == "POST":
+        kullanici_adi = request.form["kullanici_adi"]
+        sifre = request.form["sifre"]
+
+        conn = mysql.connector.connect(
+            host="localhost",
+            user="root",
+            password="",
+            database="bitirme"
+        )
+        cursor = conn.cursor()
+        cursor.execute("SELECT * FROM kullanici WHERE kullanici_adi = %s AND sifre = %s", (kullanici_adi, sifre))
+        kullanici = cursor.fetchone()
+        conn.close()
+
+        if kullanici:
+            session["kullanici_adi"] = kullanici_adi
+            return redirect(url_for("index"))
+        else:
+            flash("Kullanıcı adı veya şifre hatalı!")
+            return redirect(url_for("giris"))
+
+    return render_template("giris.html")
+
+# 📌 Kayıt Sayfası
+@app.route("/kayit", methods=["GET", "POST"])
+def kayit():
+    if request.method == "POST":
+        kullanici_adi = request.form["kullanici_adi"]
+        sifre = request.form["sifre"]
+
+        conn = mysql.connector.connect(
+            host="localhost",
+            user="root",
+            password="",
+            database="bitirme"
+        )
+        cursor = conn.cursor()
+        cursor.execute("INSERT INTO kullanici (kullanici_adi, sifre) VALUES (%s, %s)", (kullanici_adi, sifre))
+        conn.commit()
+        conn.close()
+
+        flash("Kayıt başarılı! Giriş yapabilirsiniz.")
+        return redirect(url_for("giris"))
+
+    return render_template("kayit.html")
+
+# 📌 Çıkış
+@app.route("/cikis")
+def cikis():
+    session.pop("kullanici_adi", None)
+    flash("Çıkış yapıldı.")
+    return redirect(url_for("giris"))
+
+# 🔧 Diğer sayfalar (giriş kontrolü yoksa doğrudan çalışır)
 @app.route('/dashboard')
 def dashboard():
     return render_template('dashboard.html')
@@ -33,10 +92,6 @@ def zeytinyagi_dashboard():
 @app.route('/tahmin')
 def tahmin():
     return render_template('tahmin.html')
-
-@app.route("/tahmin")
-def zeytin_tahmin():
-    return render_template("tahmin.html")
 
 @app.route("/yag_tahminleme")
 def yag_tahminleme():
@@ -50,21 +105,20 @@ def akilli_harita():
 def rapor():
     return render_template("rapor.html")
 
-
-# Dashboard grafik verilerini çekmek için API
+# 📊 Stored procedure ile dashboard verileri
 @app.route('/get_dashboard_data', methods=['POST'])
 def get_dashboard_data():
     data = request.get_json()
     procedure_name = data.get('procedure')
 
     try:
-        db = mysql.connector.connect(
+        conn = mysql.connector.connect(
             host="localhost",
             user="root",
             password="",
             database="bitirme"
         )
-        cursor = db.cursor()
+        cursor = conn.cursor()
         cursor.callproc(procedure_name)
         result_list = []
         for result in cursor.stored_results():
@@ -78,33 +132,29 @@ def get_dashboard_data():
     finally:
         try:
             cursor.close()
-            db.close()
+            conn.close()
         except:
             pass
 
-
-# Info-line kutuları için verileri çekmek (örneğin artış oranları)
 @app.route('/get_info_data', methods=['POST'])
 def get_info_data():
     data = request.get_json()
     procedure_name = data.get('procedure')
 
     try:
-        db = mysql.connector.connect(
+        conn = mysql.connector.connect(
             host="localhost",
             user="root",
             password="",
             database="bitirme"
         )
-        cursor = db.cursor()
+        cursor = conn.cursor()
         cursor.callproc(procedure_name)
         result_list = []
         for result in cursor.stored_results():
             result_list = result.fetchall()
-        # Tek değer döndüreceğiz
         if result_list and len(result_list[0]) > 0:
             return jsonify(result_list[0])
-         
         else:
             return jsonify(None)
     except Exception as e:
@@ -115,11 +165,10 @@ def get_info_data():
     finally:
         try:
             cursor.close()
-            db.close()
+            conn.close()
         except:
             pass
 
-
-# Uygulama başlatma
+# Uygulama başlat
 if __name__ == '__main__':
     app.run(debug=True)
